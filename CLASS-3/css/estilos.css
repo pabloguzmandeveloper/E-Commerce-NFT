@@ -1,0 +1,80 @@
+/*aca colocamos las fuentes de google fonts para poder trabaajar con cualquier selector por orden de lectura , si está después del selector no la leería
+
+
+para fuentes locales para
+@font.face{
+    codigo
+    }
+    
+    */
+
+
+
+*{margin: 0; padding: 0;
+font: size 16px;}
+
+
+h1{
+    color: blue;
+
+}
+
+.color{
+    color: coral;
+}
+h1{
+    color: red;
+}
+#color{
+    color: blueviolet;
+}
+
+p{
+    color: blue;
+    background-color: chartreuse;/*genera espacios en el background en el navegador por defecto y necesitamos darle margin y paddin 0 para que no deje espacios
+    con *{margin: 0; padding 0;}*/
+    text-align: justify;/*genera un espaciado tanto al la derecha como la izquierda y entre palabras*/
+    line-height: 50px/*es espaciado entre linea de texto*/;
+    text-decoration: underline overline wavy #f00;/*decoraciones de los textos la etiqueta u se olvida de su uso con estas propiedades*/
+}
+
+/*el aplicar el selector universal *{margin: 0; padding 0;} se puede realizar el mismo efecto con aplicar a todo el html una hoja de estilo normalizada a efecto de RESETEO como es la normalize.css 
+
+con el selector lo principal
+podemos agregar mas propiedades en el selector, en el archivo normalize.css tiene mas propiedades */
+
+h3{
+    color: red;
+    color: #ff0000;
+    color: rgb(255, 0, 0);
+    color: rgba(255, 255, 255);
+    color: hsl(hue, saturation, lightness);
+    color: #f00;/*tiene una variante mas acotada*/
+    font-size: 3em; /*16px;/*1rem es igual a 16px 100% es 16px 1em también 16px*/
+    font-family: cursive;
+    font-family: sans-serif;
+    font: monospace;
+    font-weight: 100%;
+    font-variant: small-caps;
+    text-align: center;
+    text-align: justify;
+
+
+}
+
+div{
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    background-image: url(../img/);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*con la propiedad beautify da collor arcoiris
+
+tambien indent rainbow o indent-rainbow investigar */
+
+
+/* list-style-image: ponemos la url para colocar la viñeta como imagen*/
+
