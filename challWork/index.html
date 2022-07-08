@@ -4,53 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Skate Monkey</title>
 </head>
 <body>
-
     <header>
         <nav>
-            <audio src="public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
-
-            <video src="public/video/Athlete - 103754.mp4" standby="charge" autoplay loop width="1890"></video> <!-- necesitamos usar este video como background fijo -->
-
-
-<!-- Será borrada esta lista no ordenada con el menú principal del sitio, es a modo de ensayo, ya que está integrada de modo temático en toda la página dentro de algunos bloques de código para armar una experiencia de usuario-->
-            <ul>
-                <li>
-                    <a href="index.html">SKATE MONKEY</a>
-                </li>
-                <li>
-                    
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="views/explore.html">Explore</a>
-                </li>
-                <li>
-                    <a href="views/contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="views/blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="views/about.html">About</a>
-                </li>
-            </ul>
+            <a class="header__home" href="index.html"><strong>SKATE MONKEY</strong></a>
+            <audio class="header__audio" src="public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
         </nav>
-        <hgroup>
-            <h1>SKATE MONKEY</h1>
-            <h2>NFT</h2>
+        <hgroup class="header__hgroup">
+            <h1 class="header__h1">SKATE MONKEY</h1>
+            <h2 class="header__h2">NFT</h2>
         </hgroup>          
     </header>
 
     <main>
-        <!-- Imagen para utilizar como background fijo desconociendo a que etiqueta semántica corresponde exactamente -->
-        <img src="public/img/monkey1.jpg" alt="src/img/monkey1.jpg">
+        <video class=main__bkgvideo src="public/video/Athlete.mp4" standby="charge" autoplay loop width="1890"></video> 
 
-        <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h2 SPOTLIGHT  -->
+        
+        <!-- <img src="public/img/monkey1.jpg" alt="src/img/monkey1.jpg"> -->
+
         <article>
-            <h2>SPOTLIGHT</h2>
+            <h2 class="main__h2">SPOTLIGHT</h2>
             <section>
                 <figure>                    
                     <a href="https://cdna.artstation.com/p/assets/images/images/029/584/970/4k/mathieu-moreau-psx-20200820-222607.jpg?1598016078">
@@ -73,7 +53,7 @@
         </article>
         
         <article>
-            <h2>PROYECT YOU"LL LOVE</h2>
+            <h2 class="main__h2">PROYECT YOU"LL LOVE</h2>
             <section>
                 <figure>                    
                     <a href="https://cdn.shopify.com/s/files/1/0053/8329/0973/products/SkateMonkeyP_1024x1024@2x.jpg?v=1588160133">
@@ -94,7 +74,7 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h2 FEATURE COOLLECTIONS -->
         <article>
-            <h2>FEATURE COLLECTIONS</h2>
+            <h2 class="main__h2">FEATURE COLLECTIONS</h2>
             <section>
                 <figure>                    
                     <a href="https://cdnb.artstation.com/p/assets/images/images/012/556/029/4k/sebastian-bar-03.jpg?1535388184">
@@ -121,7 +101,7 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h2 RECEN BIDS -->
         <article>
-            <h2>RECEN BIDS</h2>
+            <h2 class="main__h2">RECEN BIDS</h2>
             <section>
                 <figure>
                     <a href="https://cdn-animation.artstation.com/p/video_sources/000/698/327/money-monkey0001-0150.mp4">
@@ -150,9 +130,9 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h3 ABOUT -->
         <article>
-            <h3>ABOUT</h3>
+            <h3 class="main__h3">ABOUT</h3>
             <section>
-                <p>Your taste for skateboarding is our family, culture embodied by your beloved NFT, countless works by artists with their original touches at your fingertips for your great inspiration. Our Skater Monkey family welcomes everyone to our site and we want you to feel comfortable and be able to share amazing NFT works with your brothers. Welcome Skates Monkeys!!!.</p>
+                <p class="main__p">Your taste for skateboarding is our family, culture embodied by your beloved NFT, countless works by artists with their original touches at your fingertips for your great inspiration. Our Skater Monkey family welcomes everyone to our site and we want you to feel comfortable and be able to share amazing NFT works with your brothers. Welcome Skates Monkeys!!!.</p>
                 <nav>
                     <a href="views/about.html">More about us</a>
                 </nav>
