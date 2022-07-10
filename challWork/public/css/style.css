@@ -4,20 +4,20 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+/* BODY =========================================================================== */
 body{
     font-family: 'Bebas Neue';
     display: flex;
     flex-direction: column;
-    
-
 }
+/* HEADER ========================================================================= */
 header{
     display:flex;
     flex-direction: column;
     background-color:hsl(330, 94%, 55%);
 }
 .header__nav{
-    z-index: 2;
+    z-index: 3;
     object-fit: cover;
     /* position: sticky;
     top: 0px; 
@@ -50,14 +50,12 @@ header{
     border: solid 0.1px red;
     /* los controles de sonido desconozco como manipularlos con al menos un botón para pausar y activar, solo dispongo de los controles por defecto que al reducir tamaño del mismo los botones no son accesibles */
 }
-/* .main__article{
-    
-} */
+
+/* MAIN ============================================================================ */
 .main__img{
     width:15em;
     height:15em;
-    overflow: hidden;
-    /* queremos manipular las imagenes para darle una área de lados iguales pero la redimensiona no cortandola sino comprimiendola y deformandola. Quisimos colocar unas medidas en CERO para ocultar las imágenes y volver a visualizarlas con hover pero sin exito */
+    /* queremos manipular las imagenes para darle una área de lados iguales pero la redimensiona no recortandola sino comprimiendola y deformandola. Quisimos colocar unas medidas en CERO para ocultar las imágenes y volver a visualizarlas con hover:hidden pero sin exito */
 }
 .main__video{
     width:20em
@@ -65,7 +63,7 @@ header{
 .main__bkgvideo {
     width: 100%;
     object-fit: cover;
-    /* ala aplicar atributo stiky dejó de superponerse las secciones, arregrar esto o volver a fixed sin sticky */
+    /* al aplicar atributo stiky dejó de superponerse las secciones, arregrar esto o volver a fixed sin sticky */
     position: sticky;
     top: 0px;
     left: 0;
@@ -73,30 +71,57 @@ header{
     z-index: -1;
     opacity: 0.25
 }
-.main__h2{
+.main__article{
+    text-align: left;
+}
+/* CARD DROPDOWN IMAGES ============================================================ */
+.main__h2{    
+    background-color: #ffffff00;
     font-size: 4em;
-    overflow: hidden;
+    transition: 2s ease-in;
+    transition-delay: 4s;
+    /* transition: text-aling 2s ease-in;
+    text-align: left; */
 }
 .main__h2:hover {
-    background-color: black;
-    overflow: visible;
     font-family: 'Bebas Neue';
     font-size: 5em;
-    margin-left: 25px;
-    transition: 3s;
+    transition: 2s ease-in;
     background-color: #fc4ec2a9;
-
     /* aumento de fuente y despliegue de imagenes ocultas con :hover se aplica para todo el main no por sección individual ese es nuestro requisito.
-    el atributo overflow:visible no tiene efecto sobre las imagenes, lo constatamos poniendo un background-color: black pero ni afecta en lada la sección hija, no hay herencia absoluta aparentemente */
+    el atributo overflow:visible no tiene efecto sobre las imagenes, lo constatamos poniendo un background-color: black pero ni afecta en nada a la sección hija, no hay herencia absoluta aparentemente */
 }
+/* Menu desplegable ----------------------------------------------------------------*/
+.main__section{
+    height: 0px;
+    transition: height 6s ease-in;
+    transition-delay: 4s;
+}
+.main__section{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    object-fit: scale-down;
+    /* scale-down no funciona aún borrando el ancho en .main__img, necesito controlar las dimensiones sin pasar medidas, por ejemplo con scale-down hacerlo */
+    overflow: hidden;
+}
+.main__h2:hover ~ .main__section {
+    height: 300px;
+    transition: height 0.5s ease-in;
+    transition-delay: .1s;    
+}
+.main__img:hover ~ .main__section {
+    height: 300px;
+    transition: height 1s ease-in;
+    transition-delay: .1s;
+/* no funciona el hover para mantener la card abierta mientras nos paramos sobre la imagen, intentamos crear una fijación con  position:fixed   y se descontrola toda la vista */
+}
+
+/* FOOTER CSS ====================================================================== */
 .main__h3{
 
     font-family: 'Bebas Neue';
     font-size: 50px;
-    text-align: center;
-}
-.section__about{
-    overflow: hidden;
     text-align: center;
 }
 .main__h3:hover{
@@ -110,7 +135,6 @@ header{
     text-shadow: 0.1em 0.1em 40px rgb(206, 142, 5);
     /* transition: 3s; */
     text-align: center;
-
     transition-duration:  3s;
     /* sucede lo mismo aún con pocas herencias anidadas para poder desplegar el texto oculto no lo toma overflow:hidden en max-height: 0px */
 }
@@ -123,18 +147,18 @@ header{
 /* .main_moreAbaut{
     text-align: center;
 } */
-.main__section{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    object-fit: scale-down;
-    /* scale-down no funciona aún borrando el ancho en .main__img, necesito controlar las dimensiones sin pasar medidas, por ejemplo con scale-down hacerlo */
-    overflow: hidden;
-}
+
+/* EXPLORE.HTML CSS================================================================= */
 .main__gallery{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: space-evenly;
+}
+
+/* ABOUT.HTML CSS ================================================================== */
+.section__about{
+    overflow: hidden;
+    text-align: center;
 }
