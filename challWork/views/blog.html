@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- ======================================================================================= -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.vexels.com/media/users/3/132153/isolated/preview/2b07e0f940d92cdf0b02e0256417d93b-icono-de-circulo-de-patinaje.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Contact SKATE MONKEY</title>
 </head>
+<!-- ======================================================================================= -->
 <body>
+    <!-- ....................................................................................... -->
     <header>
-        <nav>
-            <audio src="../public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
-
-            <video src="../public/video/Skateboarder - 37845.mp4" standby="charge" autoplay loop width="1890"></video>
-
-<!-- Será borrada esta lista no ordenada con el menú principal del sitio, es a modo de ensayo, ya que está integrada en toda la página dentro de algunos bloques de código para dar experiencia de usuario temática-->
+        <nav class="header__nav">
+            <a class="header__home" href="index.html">SKATE MONKEY</a>
+            <audio class="header__audio" src="../public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
+        </nav>
+        <hgroup class="header__hgroup">
+            <h1 class="header__h1">SKATE MONKEY</h1>
+            <h2 class="header__h2">NFT</h2>
+        </hgroup>          
+    </header>
+    <!-- esta lista desordenada es a modo de pruebas rápidas, será borrada -->
             <ul>
                 <li>
                     <a href="../index.html">SKATE MONKEY</a>
@@ -39,14 +47,12 @@
                 <li>
                     <a href="about.html">About</a>
                 </li>
-            </ul>
-        </nav>
-        <hgroup>
-            <h1>SKATE MONKEY</h1> <!--necesitamos fijar el título del sitio entre el background y las imagenes de la galería-->
-            <h2>NFT</h2>
-        </hgroup>   
+            </ul> 
     </header>
+    <!-- ....................................................................................... -->
     <main>
+        <video class=main__bkgvideo src="../public/video/Skateboard2.mp4" standby="charge" autoplay loop width="1890">
+        </video>
         <h2>Skate Monkey Blog</h2>
 
         <p>Your blog, send the message to the community</p>
@@ -54,20 +60,15 @@
         <form action="../../form-result.php" target="_blank">
 
             <label>Name/Alias: 
-                <input type="text" name="nombre">
-            </label>            
-
-            <label>Email: 
-                <input type="text" name="correo">
             </label>
-
-            <label>
-                Message:
-                <input name="message" type="text">
+            <input type="text" name="nombre"> 
+            <label>Email: 
+            </label>
+            <input type="text" name="correo">
+            <label>Message:
             </label>        
-
+            <input name="message" type="text">
             <input type="submit" value="Send">
-
             <input type="reset" value="Reset">            
 
         </form>
@@ -76,8 +77,12 @@
         <article>
             <nav>
                 <h5>Download Skate Monkey app to track your NFT portfolio an discover drops</h5>
-                <a href="https://www.apple.com/la/app-store/" target="_blank"><img src="../public/img/Google_play_button.png" alt="appStoreButton"></a>
-                <a href="http://play.google.com/store/apps/" target="_blank"><img src="../public/img/Google_play_button.png" alt="Google_play_button"></a>
+                <a href="https://www.apple.com/la/app-store/" target="_blank">
+                    <img src="../public/img/Google_play_button.png" alt="appStoreButton">
+                </a>
+                <a href="http://play.google.com/store/apps/" target="_blank">
+                    <img src="../public/img/Google_play_button.png" alt="Google_play_button">
+                </a>
                 <h5>Get the latest Skate Monkey uppdates</h5>
                 <form action="input">
                     <label for="post">Your email</label>
@@ -115,22 +120,19 @@
             <h5>Join Skate Monkey community</h5>
             <section>
                 <nav>
-                    <a href="https://twitter.com/"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram-square"></i></a>
-                    <a href="https://discord.com/"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://web.telegram.org/"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                </nav>                    
+                    <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fa-brands fa-instagram-square"></a>
+                    <a href="https://discord.com/" class="fa-brands fa-discord"></a>
+                    <a href="https://web.telegram.org/" class="fa-brands fa-telegram"></a>
+                    <a href="https://www.youtube.com/" class="fa-brands fa-youtube"></a>
+                </nav>
             </section>
         </article>
         <article>
             <section>
                 <nav>
-                    <a href="">We eat use cookies for better experience</a>
+                    <a href="config.html" target="_blank">We eat use cookies for better experience</a> <div>© Skate Monkey, Inc All rights reserved.</div>
                 </nav>
-                <p>
-                    © Skate Monkey, Inc All rights reserved.
-                </p>
                 <nav>
                     <a href="c_guidelines.html">Community guidelines</a>
                     <a href="terms.html">Terms</a>
