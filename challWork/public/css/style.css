@@ -44,10 +44,9 @@ header{
     color: #b109db;
 }
 .header__audio{
-    width: 50px;
-    height: 20px;
-    margin-right: 2px;
-    border: solid 0.1px red;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
     /* los controles de sonido desconozco como manipularlos con al menos un botón para pausar y activar, solo dispongo de los controles por defecto que al reducir tamaño del mismo los botones no son accesibles */
 }
 

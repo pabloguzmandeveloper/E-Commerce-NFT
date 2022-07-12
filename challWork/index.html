@@ -19,7 +19,9 @@
     <header>
         <nav class="header__nav">
             <a class="header__home" href="index.html">SKATE MONKEY</a>
-            <audio class="header__audio" src="public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
+            <audio id="player" class="header__audio" src="public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
+            <button onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pause</button>
         </nav>
         <hgroup class="header__hgroup">
             <h1 class="header__h1">SKATE MONKEY</h1>
