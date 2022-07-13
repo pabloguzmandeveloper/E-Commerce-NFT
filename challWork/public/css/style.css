@@ -6,12 +6,14 @@
 }
 /* GRID BODY ============================================================== */
 .body__cont {
+    /* z-index: -2;
+    background-color:hsl(330, 94%, 55%); */
     font-family: 'Bebas Neue';
     height: auto;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 150px;
+    grid-template-rows: 100px auto 150px;
     grid-template-areas:
                         "box1"
                         "box2"
@@ -55,7 +57,7 @@ footer {
 .header__h2{
     grid-area: nft_h2;
 }
-/* flex header-------------------------------------------------------- */
+/* flexbox header .......................................................... */
 .header__home{
     margin-left: 5px;
     text-decoration: none;
@@ -70,6 +72,7 @@ footer {
 }
 /* GRID MAIN ============================================================== */
 .main__grid {
+    /* z-index: 1; */
     height:auto;
     width:100%;
     background-color: main__bkgvideo;
@@ -100,7 +103,7 @@ footer {
 .about {
     grid-area: about;
 }
-/* flex main---------------------------------------------------------- */
+/* flexbox main .......................................................... */
 .main__bkgvideo {
     width: 100%;
     object-fit: cover;
@@ -111,6 +114,72 @@ footer {
     right: 0;
     z-index: -1;
     opacity: 0.25
+}
+.main__img{
+    width:15em;
+    height:15em;
+}
+/* CARD DROPDOWN IMAGES */
+/* subtitulos desplegables */
+.main__h2{    
+    background-color: #ffffff00;
+    font-size: 4em;
+    transition: 2s ease-in;
+    transition-delay: 4s;
+    /* transition: text-aling 2s ease-in;
+    text-align: left; */
+}
+.main__h2:hover {
+    font-family: 'Bebas Neue';
+    font-size: 5em;
+    transition: 2s ease-in;
+    background-color: #fc4ec2a9;
+    /* aumento de fuente y despliegue de imagenes ocultas con :hover se aplica para todo el main no por sección individual ese es nuestro requisito.
+    el atributo overflow:visible no tiene efecto sobre las imagenes, lo constatamos poniendo un background-color: black pero ni afecta en nada a la sección hija, no hay herencia absoluta aparentemente */
+}
+.main__h2{    
+    background-color: #ffffff00;
+    font-size: 4em;
+    transition: 2s ease-in;
+    transition-delay: 4s;
+    /* transition: text-aling 2s ease-in;
+    text-align: left; */
+}
+.about {
+    font-size: 4em;
+    transition: 2s ease-in;
+    transition-delay: 4s;
+}
+.about:hover {
+    font-family: 'Bebas Neue';
+    font-size: 5em;
+    transition: 2s ease-in;
+    background-color: #fc4ec2a9;    
+}
+/* imagenes desplegables */
+.main__section{
+    height: 0px;
+    transition: height 6s ease-in;
+    transition-delay: 4s;
+}
+.main__section{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    object-fit: scale-down;
+    /* scale-down no funciona aún borrando el ancho en .main__img, necesito controlar las dimensiones sin pasar medidas, por ejemplo con scale-down hacerlo */
+    overflow: hidden;
+}
+.main__h2:hover ~ .main__section {
+    height: 300px;
+    transition: height 0.5s ease-in;
+    transition-delay: .1s;
+}
+.main__img:hover ~ .main__section {
+    height: 300px;
+    transition: height 1s ease-in;
+    transition-delay: .1s;
+/* no funciona el hover para mantener la card abierta mientras nos paramos sobre la imagen, intentamos crear una fijación con  position:fixed   y se descontrola toda la vista */
 }
 /* GRID FOOTER ============================================================== */
 .footer {
@@ -127,12 +196,56 @@ footer {
     padding: 0px;
 }
 .footer__top {
+    background-color: #241727;
     grid-area: top;
 }
 .footer__middle {
+    background-color: #000000;
     grid-area: middle;
 }
 .footer__end {
+    background-color: #000000;
     grid-area: end;
 }
-/* el footer se me fué arriba al comienzo del main al implementar grid */
+/* el footer se me fué arriba al comienzo del main al implementar grid y se arregló cuando pusimos en auto "grid-template-rows: 100px auto 150px;"  */
+/* flexbox footer ........................................................ */
+.footer__qr{
+    width:100px;
+    height:100px;
+}
+.footer__img{
+    width:280px;
+    height: 200px;
+}
+.footer__app img{
+    width:310px;
+    height:100px;
+}
+h5 {
+    color: #fff;
+}
+.footer__links a {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    transition: color 0.5s ease-in;
+    color: #fff;
+}
+.footer__links a:hover {
+    transition: color 0.5s ease-in;
+    transition-delay: .1s;
+    color: rgb(3, 250, 106);
+}
+.footer__social a {
+    width: 2%;
+    transition: color 0.5s ease-in;
+    color: #fff;
+}
+.footer__social a:hover {
+    transition: color 0.5s ease-in;
+    transition-delay: .1s;
+    color: rgb(3, 250, 106);
+}
+.footer__end {
+    color: #fff;
+}
