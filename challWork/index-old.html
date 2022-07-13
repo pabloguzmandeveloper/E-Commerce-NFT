@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/style-old.css">
     <link rel="icon" href="https://images.vexels.com/media/users/3/132153/isolated/preview/2b07e0f940d92cdf0b02e0256417d93b-icono-de-circulo-de-patinaje.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,10 @@
             <button onclick="document.getElementById('player').play()">Play</button>
             <button onclick="document.getElementById('player').pause()">Pause</button>
         </nav>
+        <hgroup class="header__hgroup">
             <h1 class="header__h1">SKATE MONKEY</h1>
-            <h2 class="header__h2">NFT</h2>          
+            <h2 class="header__h2">NFT</h2>
+        </hgroup>          
     </header>
 <!-- ....................................................................................... -->
     <main class="main__grid">
@@ -32,7 +34,7 @@
         </video> 
 
         <article class="main__article">
-            <h2 class="main__h2 spotlight">SPOTLIGHT</h2>
+            <h2 class="main__h2">SPOTLIGHT</h2>
             <section class="main__section">
                 <figure class="main__figure">                    
                     <a href="https://cdna.artstation.com/p/assets/images/images/029/584/970/4k/mathieu-moreau-psx-20200820-222607.jpg?1598016078">
@@ -54,7 +56,7 @@
         </article>
         
         <article>
-            <h2 class="main__h2 proyect-love">PROYECT YOU"LL LOVE</h2>
+            <h2 class="main__h2">PROYECT YOU"LL LOVE</h2>
             <section class="main__section">
                 <figure>                    
                     <a href="https://cdn.shopify.com/s/files/1/0053/8329/0973/products/SkateMonkeyP_1024x1024@2x.jpg?v=1588160133">
@@ -75,7 +77,7 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h2 FEATURE COOLLECTIONS -->
         <article>
-            <h2 class="main__h2 feature-collection">FEATURE COLLECTIONS</h2>
+            <h2 class="main__h2">FEATURE COLLECTIONS</h2>
             <section class="main__section">
                 <figure>                    
                     <a href="https://cdnb.artstation.com/p/assets/images/images/012/556/029/4k/sebastian-bar-03.jpg?1535388184">
@@ -102,7 +104,7 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h2 RECEN BIDS -->
         <article>
-            <h2 class="main__h2 recen-bids">RECEN BIDS</h2>
+            <h2 class="main__h2">RECEN BIDS</h2>
             <section class="main__section">
                 <figure>
                     <a href="https://cdn-animation.artstation.com/p/video_sources/000/698/327/money-monkey0001-0150.mp4">
@@ -131,7 +133,7 @@
         </article>
         <!--bloque con secction hidden para desplegar cuando cursor pasa arriba de h3 ABOUT -->
         <article>
-            <h3 class="main__h3 about">ABOUT</h3>
+            <h3 class="main__h3">ABOUT</h3>
             <section class="section__about">
                 <p class="main__p">Your taste for skateboarding is our family, culture embodied by your beloved NFT, countless works by artists with their original touches at your fingertips for your great inspiration. Our Skater Monkey family welcomes everyone to our site and we want you to feel comfortable and be able to share amazing NFT works with your brothers. Welcome Skates Monkeys!!!.</p>
                 <nav >
@@ -142,7 +144,7 @@
     </main>
     <!-- ....................................................................................... -->
     <footer class="footer">
-        <article class="footer__top">
+        <article>
             <nav>
                 <h5>Download Skate Monkey app to track your NFT portfolio an discover drops</h5>
                 <a href="https://www.apple.com/la/app-store/" target="_blank">
@@ -160,7 +162,8 @@
                 <img src="public/img/qr.png" alt="qr_link">Scan to download Skate Monkey app</img>
             </figure>
         </article>
-        <article class="footer__middle">
+
+        <article>
             <h5>Links</h5>
             <section>
                 <nav>
@@ -170,20 +173,26 @@
                     <a href="views/about.html">About us more!</a>
                     <a href="views/contact.html">Help center</a>
                 </nav>
-            </section>            
-            <section>
-                <h5>Join Skate Monkey community</h5>
-                    <nav>
-                        <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
-                        <a href="https://www.instagram.com/" class="fa-brands fa-instagram-square"></a>
-                        <a href="https://discord.com/" class="fa-brands fa-discord"></a>
-                        <a href="https://web.telegram.org/" class="fa-brands fa-telegram"></a>
-                        <a href="https://www.youtube.com/" class="fa-brands fa-youtube"></a>
-                    </nav>
             </section>
         </article>
-        <article class="footer__end">            
-            <div>© Skate Monkey, Inc All rights reserved.</div>
+        <article>
+            <h5>Join Skate Monkey community</h5>
+            <section>
+                <nav>
+                    <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fa-brands fa-instagram-square"></a>
+                    <a href="https://discord.com/" class="fa-brands fa-discord"></a>
+                    <a href="https://web.telegram.org/" class="fa-brands fa-telegram"></a>
+                    <a href="https://www.youtube.com/" class="fa-brands fa-youtube"></a>
+                </nav>
+            </section>
+        </article>
+        <article>
+            <section>
+                <nav>
+                    <div>© Skate Monkey, Inc All rights reserved.</div>
+                </nav>
+            </section>                
         </article>
     </footer>
     <!-- ....................................................................................... -->
