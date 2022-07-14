@@ -4,8 +4,8 @@
     box-sizing:border-box;
     text-decoration: none;
 }
-/* GRID BODY ============================================================== */
-.body__cont {
+/* GRID-NESTED BODY ============================================================== */
+.bodyNested {
     /* z-index: -2;
     background-color:hsl(330, 94%, 55%); */
     font-family: 'Bebas Neue';
@@ -13,7 +13,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px auto 150px;
+    grid-template-rows: auto auto 150px;
     grid-template-areas:
                         "box1"
                         "box2"
@@ -68,7 +68,7 @@ footer {
     overflow: hidden;
     width: 0px;
     height: 0px;
-    /* los controles de sonido desconozco como manipularlos con al menos un botón para pausar y activar, solo dispongo de los controles por defecto que al reducir tamaño del mismo los botones no son accesibles */
+    /* los controles de sonido desconozco como ocultarlos sin pasar unas dimensiones en CERO, con una ayuda de la web utilizo los elementos del DOM para visualizar los dos botones de paly y pause, pero sin saber como configurar su visual */
 }
 /* GRID MAIN ============================================================== */
 .main__grid {
@@ -78,7 +78,7 @@ footer {
     background-color: main__bkgvideo;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
                         "spotlight"
                         "proyect-love"
@@ -118,6 +118,7 @@ footer {
 .main__img{
     width:15em;
     height:15em;
+    /* estas imagenes la vamos a recortar con una única proporcion para trabajarlas sin dimensiones en css */
 }
 /* CARD DROPDOWN IMAGES */
 /* subtitulos desplegables */
@@ -207,7 +208,8 @@ footer {
     background-color: #000000;
     grid-area: end;
 }
-/* el footer se me fué arriba al comienzo del main al implementar grid y se arregló cuando pusimos en auto "grid-template-rows: 100px auto 150px;"  */
+/* el footer se me fué arriba al comienzo del main al implementar grid y se arregló cuando pusimos en auto "grid-template-rows: 100px auto 150px;" pero sigue habiendo un espacio vacío que no puedo lograr ocupar con la grid correspondiente a main */
+
 /* flexbox footer ........................................................ */
 .footer__qr{
     width:100px;
