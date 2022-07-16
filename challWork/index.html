@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class= "index" lang="en">
 <!-- ======================================================================================= -->
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     <header class="header__grid">
         <nav class="header__nav">
             <a class="header__home" href="index.html">SKATE MONKEY</a>
-            <audio id="player" class="header__audio" src="public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
+            <audio id="player" class="header__audio" src="public/audio/experience-sorround.mp3" standby="charging" autoplay loop controls></audio>
             <button onclick="document.getElementById('player').play()">Play</button>
             <button onclick="document.getElementById('player').pause()">Pause</button>
         </nav>
@@ -31,7 +31,7 @@
     <main class="main__grid">
         <video class=main__bkgvideo src="public/video/Athlete.mp4" standby="charge" autoplay loop width="1890">
         </video>
-
+<div class="main__scroll">
         <article class="main__article spotlight">
             <h2 class="main__h2">SPOTLIGHT</h2>
             <section class="main__section">
@@ -262,6 +262,7 @@
                 </div>
             </section>
         </article>
+</div>
         <article class="about">
             <div class="about__father">
                 <div class="about__card">
@@ -280,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-            </div>           -->
+            </div>
         </article>
     </main>
     <!-- ....................................................................................... -->

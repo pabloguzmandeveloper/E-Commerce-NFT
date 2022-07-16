@@ -4,6 +4,10 @@
     box-sizing:border-box;
     text-decoration: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /* GRID-NESTED BODY ============================================================== */
 .bodyNested {
     /* z-index: -2;
@@ -44,6 +48,7 @@ footer {
     padding: 0px;    
 }
 .header__nav{
+    width: 100%;
     background-color: greenyellow;
     grid-area: nav1;
     display: grid;
@@ -52,6 +57,7 @@ footer {
     
 }
 .header__h1{
+    margin-top: 20px;
     grid-area: skate_monkey_h1;
     display: grid;
     justify-content: center;
@@ -112,12 +118,23 @@ footer {
 .about {
     grid-area: about;
 }
+.main__scroll{
+    min-height: 800px;
+    max-height: 800px;
+    overflow-y: scroll;
+    
+}
+.main__scroll::-webkit-scrollbar{
+    width:0px;
+}
+/* webkit-scrollbar-thumb damos el color de fondo al scroll o transparente, border radius mas circular o recto 
+webkit-scrollbar-track    maneja un background del fondo de toda la barra */
 /* flexbox main .......................................................... */
 .main__bkgvideo {
     width: 100%;
     object-fit: cover;
     /* al aplicar atributo stiky dejó de superponerse las secciones, arregrar esto o volver a fixed sin sticky */
-    position: sticky;
+    position: absolute;
     top: 100px;
     left: 0;
     right: 0;
@@ -131,21 +148,19 @@ footer {
 }
 /* CARD DROPDOWN IMAGES */
 /* subtitulos desplegables */
-.main__h2{    
-    background-color: #ffffff00;
+.main__h2{
+    text-align: left;
     font-size: 4em;
     transition: 3s ease-in;
     transition-delay: 45s;
-    /* transition: text-aling 2s ease-in;
-    text-align: left; */
 }
 .main__h2:hover {
+    text-align: center;
     font-family: 'Bebas Neue';
     font-size: 5em;
     transition: 1s ease-in;
     background-color: #fc4ec2a9;
-    /* aumento de fuente y despliegue de imagenes ocultas con :hover se aplica para todo el main no por sección individual ese es nuestro requisito.
-    el atributo overflow:visible no tiene efecto sobre las imagenes, lo constatamos poniendo un background-color: black pero ni afecta en nada a la sección hija, no hay herencia absoluta aparentemente */
+    /* continuamos con la falla en regresar la alineación de la fuente a la derecha sin suavidad */
 }
 .main__h3 {
     font-size: 4em;
@@ -175,14 +190,6 @@ footer {
     transition: height 0.5s ease-in;
     transition-delay: .1s;
 }
-.main__img:hover ~ .main__section {
-    height: 300px;
-    transition: height 1s ease-in;
-    transition-delay: .1s;
-/* no funciona el hover para mantener la card abierta mientras nos paramos sobre la imagen, intentamos crear una fijación con  position:fixed   y se descontrola toda la vista */
-}
-
-
 
 /* GRID FOOTER ============================================================== */
 .footer {
