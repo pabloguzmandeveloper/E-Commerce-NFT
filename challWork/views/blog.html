@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style3d.css">
     <link rel="icon" href="https://images.vexels.com/media/users/3/132153/isolated/preview/2b07e0f940d92cdf0b02e0256417d93b-icono-de-circulo-de-patinaje.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../public/css/style.css">
@@ -14,17 +16,17 @@
     <title>Contact SKATE MONKEY</title>
 </head>
 <!-- ======================================================================================= -->
-<body>
+<body class="bodyNested">
     <!-- ....................................................................................... -->
-    <header>
+    <header class="header__grid">
         <nav class="header__nav">
-            <a class="header__home" href="../index.html">SKATE MONKEY</a>
-            <audio class="header__audio" src="../public/audio/experience-sorround.mp3" standby="charge" autoplay loop controls></audio>
+            <a class="header__home" href="../index.html">S K A T E   M O N K E Y</a>
+            <audio id="player" class="header__audio" src="../public/audio/experience-sorround.mp3" standby="charging" autoplay loop controls></audio>
+            <button onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pause</button>
         </nav>
-        <hgroup class="header__hgroup">
-            <h1 class="header__h1">SKATE MONKEY</h1>
-            <h2 class="header__h2">NFT</h2>
-        </hgroup>          
+            <h1 class="header__h1">S K A T E  M O N K E Y</h1>
+            <h2 class="header__h2">N F T</h2>          
     </header>
     <!-- ....................................................................................... -->
     <main>
@@ -55,20 +57,22 @@
         <article class="footer__top">
             <nav class="footer__app">
                 <h5>Download Skate Monkey app to track your NFT portfolio an discover drops</h5>
-                <a href="https://www.apple.com/la/app-store/" target="_blank">
+                <div class="imgapp">
+                    <a href="https://www.apple.com/la/app-store/" target="_blank">
                     <img src="../public/img/App_Store_button.png" alt="appStoreButton">
-                </a>
-                <a href="http://play.google.com/store/apps/" target="_blank">
+                    </a>
+                    <a href="http://play.google.com/store/apps/" target="_blank">
                     <img src="../public/img/Google_play_button.png" alt="Google_play_button">
-                </a>
+                    </a>
+                </div>
                 <h5>Get the latest Skate Monkey uppdates</h5>
             </nav>
-            <figure>
+            <figure class="img-mobile">
                 <img class="footer__img" src="../public/img/mobileapps.jpg" alt="mobileapps">
             </figure>
-            <figure>
+            <figure class="footer__qr">
                 <h5>Scan to download Skate Monkey app</h5>
-                <img class="footer__qr" src="../public/img/qr.png" alt="qr_link"></img>
+                <img src="../public/img/qr.png" alt="qr_link"></img>
             </figure>
         </article>
         <article class="footer__middle">
@@ -76,20 +80,21 @@
             <section class="footer__links">
                 <h5>Links</h5>
                     <nav>
-                        <a href="../index.html">Home</a>
-                        <a href="explore.html">Explore gallery</a>
-                        <a href="about.html">About us more!</a>
-                        <a href="contact.html">Help center</a>
+                        <a href="../index.html">H  o  m  e</a>
+                        <a href="explore.html">E x p l o r e - g a l l e r y</a>
+                        <a href="blog.html">B l o g</a>
+                        <a href="about.html">A b o u t - us - m o r e !</a>
+                        <a href="contact.html">H e l p - c e n t e r</a>
                     </nav>
             </section>            
             <section class="footer__social">
                 <h5>Join Skate Monkey community</h5>
                     <nav>
-                        <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
-                        <a href="https://www.instagram.com/" class="fa-brands fa-instagram-square"></a>
-                        <a href="https://discord.com/" class="fa-brands fa-discord"></a>
-                        <a href="https://web.telegram.org/" class="fa-brands fa-telegram"></a>
-                        <a href="https://www.youtube.com/" class="fa-brands fa-youtube"></a>
+                        <a href="https://twitter.com/" class="fa-brands fa-twitter fa-2x"></a>
+                        <a href="https://www.instagram.com/" class="fa-brands fa-instagram-square fa-2x"></a>
+                        <a href="https://discord.com/" class="fa-brands fa-discord fa-2x"></a>
+                        <a href="https://web.telegram.org/" class="fa-brands fa-telegram fa-2x"></a>
+                        <a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-2x"></a>
                     </nav>
             </section>
         </article>

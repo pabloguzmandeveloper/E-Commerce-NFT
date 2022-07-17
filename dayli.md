@@ -22,4 +22,8 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     width:0px;
 }
 
+    Una observación no menor es que las visualizaciones por medio de un hosting como Vercel desde repositorio hay detalles de visualización que nos son iguales a cuando pruebo el mismo proyecto con el Go Live de VSC, desconozco cual es la razón.
 
+    Por lo que me comentaron en Discord sobre el smooth es que sólo funciona para navegaciones entre secciones de una sola página, la misma donde se encuetra la navegación, o sea con hipervínculos linkeados con id en el href.
+
+    Finalizando en madrugada de Domingo al borrar las medidas del height en las grids no se modifican en nada las dimensiones de la página, esto lo descubrimos al querer reducir de tamaño el footer. Queda pendiente corregir el footer a mas chico.
