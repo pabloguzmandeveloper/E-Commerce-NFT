@@ -1,3 +1,4 @@
+@import url(/node_modules/animate.css/animate.css) ;
 *{
     margin: 0;
     padding: 0;
@@ -65,6 +66,7 @@ footer {
     grid-area: nft_h2;
     justify-self: center;
 }
+
 /* flexbox header .......................................................... */
 
 .header__nav {
@@ -90,6 +92,11 @@ footer {
     height: 0px;
     /* los controles de sonido desconozco como ocultarlos sin pasar unas dimensiones en CERO, con una ayuda de la web utilizo los elementos del DOM para visualizar los dos botones de paly y pause, pero sin saber como configurar su visual */
 }
+/* media query HEADER ------------ */
+@media screen {
+    
+}
+
 /* GRID MAIN ============================================================== */
 .main__grid {
     background-color: main__bkgvideo;
@@ -191,7 +198,17 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     transition: height 0.5s ease-in;
     transition-delay: .1s;
 }
-
+/* media query MAIN---------- */
+@media screen and (min-width: 768px) {
+    .main__h3 {
+        background-color: aqua;
+        width: 100%;
+        font-size:2em;
+    }
+    .main__section {
+        width: 100%;
+    }
+}
 /* GRID FOOTER ============================================================== */
 .footer {
     display: grid;
@@ -298,6 +315,11 @@ h5 {
     flex-direction: column;
 }
 .footer__links a:hover {
+    animation-name: "animate__animated animate__pulse";
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+
     transition: color 0.3s ease;    
     color: rgb(3, 250, 106);
 }
@@ -330,3 +352,6 @@ h5 {
     justify-content: center;
     color: #fff;
 }
+/* Animations--------------- */
+
+/* media query FOOTER -------- */

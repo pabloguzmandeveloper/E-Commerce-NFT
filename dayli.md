@@ -27,3 +27,7 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     Por lo que me comentaron en Discord sobre el smooth es que sólo funciona para navegaciones entre secciones de una sola página, la misma donde se encuetra la navegación, o sea con hipervínculos linkeados con id en el href.
 
     Finalizando en madrugada de Domingo al borrar las medidas del height en las grids no se modifican en nada las dimensiones de la página, esto lo descubrimos al querer reducir de tamaño el footer. Queda pendiente corregir el footer a mas chico.
+
+18/julio/2022
+    Utilizamos transformaciones anteriormente y ahora agregamos el uso de animaciones desde repositorio https://animate.style/ , podemos pasar la hoja de estilo en linea dentro del head por link y luego colocar a cada elemento el nombre de la animación buscada y en la hoja de estilo configurada como por ejemplo :hover hacer el llamado del mismo nombre de la animación y subsiguientes configuraciones de la misma.
+    

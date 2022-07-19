@@ -92,7 +92,14 @@
     background-color: #69dbf8;
     color: white;
 }
-/* ----------------------------------- */
+/* media query CARDS FLIP------ */
+@media screen and (min-width: 1080px){
+    .container__card {
+        width: 1080px;
+    }
+}
+
+/* About card----------------------------------- */
 .about{
     perspective: 1000px;
     display: flex;
