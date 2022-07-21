@@ -31,3 +31,6 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 18/julio/2022
     Utilizamos transformaciones anteriormente y ahora agregamos el uso de animaciones desde repositorio https://animate.style/ , podemos pasar la hoja de estilo en linea dentro del head por link y luego colocar a cada elemento el nombre de la animación buscada y en la hoja de estilo configurada como por ejemplo :hover hacer el llamado del mismo nombre de la animación y subsiguientes configuraciones de la misma.
     
+21/julio/2022
+    Comenzando con implemetar media query nos encontramos con que toma una orden solo a los 768px cambiar el tamaño pero otra media con 48px no la toma.
+    

@@ -10,6 +10,17 @@ html {
     scroll-behavior: smooth;
     /* sólo sirve para navegaciones dentro de la misma página con hipervinculos en el href por medio de id */
 }
+@media screen and (max-width: 768px) {
+    *{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 480) {
+    * {
+        font-size: 16px;
+    }    
+}
+/* probamos sin exito controlar el tamaño de las fuentes en base a las unidades em desde la raiz */
 /* GRID-NESTED BODY ============================================================== */
 .bodyNested {
     font-family: 'Bebas Neue';
@@ -82,9 +93,12 @@ footer {
 .header__h1 {
     font-weight: bolder;
     font-size: 5em;
+    text-align: center;
 }
 .header__h2 {
+    font-weight: bolder;
     font-size: 5em;
+    text-align: center;
 }
 .header__audio{
     overflow: hidden;
@@ -93,7 +107,18 @@ footer {
     /* los controles de sonido desconozco como ocultarlos sin pasar unas dimensiones en CERO, con una ayuda de la web utilizo los elementos del DOM para visualizar los dos botones de paly y pause, pero sin saber como configurar su visual */
 }
 /* media query HEADER ------------ */
-@media screen {
+
+@media screen and (max-width: 768px) {
+    .header__h1, .header__h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 480) {
+    .header__h1, .header__h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
     
 }
 
@@ -199,7 +224,13 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     transition-delay: .1s;
 }
 /* media query MAIN---------- */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) {
+    .main__h2 {
+        text-align: left;
+        font-size: 1.5em;
+        transition: 3s ease-in;
+        transition-delay: 45s;
+    }
     .main__h3 {
         background-color: aqua;
         width: 100%;
@@ -207,6 +238,12 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     }
     .main__section {
         width: 100%;
+    }
+}
+@media screen and (min-width:768px) {
+    .main__h3 {
+        width: 100%;
+        font-size: 2em;
     }
 }
 /* GRID FOOTER ============================================================== */
