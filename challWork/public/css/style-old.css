@@ -7,157 +7,311 @@
 /* BODY =========================================================================== */
 body{
     font-family: 'Bebas Neue';
+    display: grid;
+    grid-template-rows: auto;
+    width: 100%;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+    width:0px;
+}
+/* HEADER ============================================================== */
+header{
+    background-color:hsla(39, 100%, 51%, 0.288);
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-/* HEADER ========================================================================= */
-header{
-    display:flex;
-    flex-direction: column;
-    background-color:hsl(330, 94%, 55%);
-}
-.header__nav{
-    z-index: 3;
-    object-fit: cover;
-    /* position: sticky;
-    top: 0px; 
-    la otra alternativa en usar esto es sacando el bloque de nav de dentro del header para posicionarlo en <body, pero perdería el orden tal vez semántico, como últmo recurso haré eso.*/
+header nav{
+    background-color: rgb(255, 206, 47);
     position: fixed;
-    background-color:greenyellow;
-    display:flex;
-    flex-direction: row;
-    justify-content:space-between;
-    /* esta barra de navegación se me desconfiguró cuando agregué el atributo position: fixed;, y necesito que quede fija para controlar ir al home y apagar y prender el sonido*/
-}
-.header__hgroup{
-    overflow: hidden;
-    font-size: 40px;
-    text-align: center;
-    line-height:1;
-    /* tengo una incidencia con line-height el cual lo estoy usando para que me dé una separación entre titulos con 1px y me termina superponiendo los 2 títulos y a su vez no me permite ubicarlo dentro del background del header, con 60px se acerca y no del todo a lo que quiero. Un descontrol.
-    solucioné medianamente con poner 1 pero no llega a tener la separación casi pegada entre h1 y h2  que es la que busco*/
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
 }
 .header__home{
     margin-left: 5px;
-    text-decoration: none;
     font-weight: bolder;
-    color: #b109db;
+    color: #011af5;
+}
+.header__h1 {
+    display: flex;
+    font-weight: bolder;
+    font-size: 5em;
+    margin-top: 20px;
+}
+.header__h2 {
+    font-weight: bolder;
+    font-size: 5em;
 }
 .header__audio{
-    overflow: hidden;
-    width: 0px;
-    height: 0px;
-    /* los controles de sonido desconozco como manipularlos con al menos un botón para pausar y activar, solo dispongo de los controles por defecto que al reducir tamaño del mismo los botones no son accesibles */
+    display: none;
+}
+.header__home{
+    width: 90%;
+}
+header nav button{
+    width: 5%;
 }
 
-/* MAIN ============================================================================ */
-.main__img{
-    width:15em;
-    height:15em;
-    /* queremos manipular las imagenes para darle una área de lados iguales pero la redimensiona no recortandola sino comprimiendola y deformandola. Quisimos colocar unas medidas en CERO para ocultar las imágenes y volver a visualizarlas con hover:hidden pero sin exito */
+/* flexbox header .................................................... */
+
+/* media query HEADER ------------ */
+
+/* MAIN ============================================================== */
+.main__scroll{
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-y: scroll;
 }
-.main__video{
-    width:20em
+.main__scroll::-webkit-scrollbar{
+    width:0px;
 }
-.main__bkgvideo {
-    width: 100%;
-    object-fit: cover;
-    /* al aplicar atributo stiky dejó de superponerse las secciones, arregrar esto o volver a fixed sin sticky */
-    position: sticky;
-    top: 0px;
-    left: 0;
-    right: 0;
+.main__scroll__gallery{
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.main__scroll__gallery::-webkit-scrollbar{
+    width:0px;
+}
+.video{
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    position: absolute;
     z-index: -1;
-    opacity: 0.25
+    opacity: 0.25;
+    object-fit: cover;
 }
-.main__article{
+video{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/* flexbox main ...................................................... */
+main {
+    display: flex;
+    flex-direction: column;
+}
+video {
+    display: flex;
+    bottom: 0;
+    object-fit: cover;
+}
+/* CARD DROPDOWN IMAGES */
+/* subtitulos desplegables */
+.main__h2{
     text-align: left;
-}
-/* CARD DROPDOWN IMAGES ============================================================ */
-.main__h2{    
-    background-color: #ffffff00;
     font-size: 4em;
-    transition: 2s ease-in;
-    transition-delay: 4s;
-    /* transition: text-aling 2s ease-in;
-    text-align: left; */
+    transition: 3s ease-in;
+    transition-delay: 45s;
 }
 .main__h2:hover {
+    text-align: center;
     font-family: 'Bebas Neue';
     font-size: 5em;
-    transition: 2s ease-in;
-    background-color: #fc4ec2a9;
-    /* aumento de fuente y despliegue de imagenes ocultas con :hover se aplica para todo el main no por sección individual ese es nuestro requisito.
-    el atributo overflow:visible no tiene efecto sobre las imagenes, lo constatamos poniendo un background-color: black pero ni afecta en nada a la sección hija, no hay herencia absoluta aparentemente */
+    transition: 1s ease-in;
+    background-color: #969696d3;
+    /* continuamos con la falla en regresar la alineación de la fuente a la derecha sin suavidad */
 }
-/* Menu desplegable ----------------------------------------------------------------*/
+/* imagenes desplegables */
 .main__section{
     height: 0px;
-    transition: height 6s ease-in;
-    transition-delay: 4s;
-}
-.main__section{
+    transition: all 6s ease-in;
+    transition-delay: 40s;
     display: flex;
-    justify-content:space-evenly;
     align-items: center;
-    object-fit: scale-down;
-    /* scale-down no funciona aún borrando el ancho en .main__img, necesito controlar las dimensiones sin pasar medidas, por ejemplo con scale-down hacerlo */
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .main__h2:hover ~ .main__section {
     height: 300px;
     transition: height 0.5s ease-in;
     transition-delay: .1s;
 }
-.main__img:hover ~ .main__section {
-    height: 300px;
-    transition: height 1s ease-in;
-    transition-delay: .1s;
-/* no funciona el hover para mantener la card abierta mientras nos paramos sobre la imagen, intentamos crear una fijación con  position:fixed   y se descontrola toda la vista */
+.about {
+    bottom: 0;
 }
-
-/* FOOTER CSS ====================================================================== */
-.main__h3{
-
-    font-family: 'Bebas Neue';
-    font-size: 50px;
-    text-align: center;
-}
-.main__h3:hover{
-    background-color: #d1ff02b6;
-    overflow: visible;
-    font-family: 'Bebas Neue';
-    font-size: 5em;
-    text-shadow: firebrick;
-    color: rgb(0, 0, 0) ;
-    -webkit-text-stroke: 0.1px rgb(31, 29, 29);
-    text-shadow: 0.1em 0.1em 40px rgb(206, 142, 5);
-    /* transition: 3s; */
-    text-align: center;
-    transition-duration:  3s;
-    /* sucede lo mismo aún con pocas herencias anidadas para poder desplegar el texto oculto no lo toma overflow:hidden en max-height: 0px */
-}
-.main__p{
-    font-family: 'Bebas Neue';
-    margin-left: 25px;
-    margin-right: 25px;
-    text-align: center;
-}
-/* .main_moreAbaut{
-    text-align: center;
-} */
-
-/* EXPLORE.HTML CSS================================================================= */
-.main__gallery{
+/* Gallery--------------------------- */
+.main__gallery {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: space-evenly;
+    flex-flow: row wrap;
+    max-width: auto;
+}
+.main__scroll__gallery {
+    bottom: 0;
 }
 
-/* ABOUT.HTML CSS ================================================================== */
-.section__about{
-    overflow: hidden;
-    text-align: center;
+/* media query MAIN---------- */
+/* @media screen and (min-width: 320px) {
+    .main__h2 {
+        text-align: left;
+        font-size: 1.5em;
+        transition: 3s ease-in;
+        transition-delay: 45s;
+    }
+    .main__h6 {
+        background-color: aqua;
+        width: 100%;
+        font-size:2em;
+    }
+    .main__section {
+        width: 100%;
+    }
 }
+@media screen and (min-width:768px) {
+    .main__h6 {
+        width: 100%;
+        font-size: 2em;
+    }
+} */
+/* GRID FOOTER ============================================================== */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
+    grid-template-areas:
+                        "top"
+                        "middle"
+                        "end";
+    grid-gap: 0px;
+    padding: 0px;
+}
+.footer__top {
+    background-color: #252525;
+    grid-area: top;
+}
+.footer__middle {
+    background-color: #000000;
+    grid-area: middle;
+}
+.footer__end {
+    background-color: #000000;
+    grid-area: end;
+}
+/* el footer se me fué arriba al comienzo del main al implementar grid y se arregló cuando pusimos en auto "grid-template-rows: 100px auto 150px;" pero sigue habiendo un espacio vacío que no puedo lograr ocupar con la grid correspondiente a main */
+
+/* flexbox footer ........................................................ */
+.footer__top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__app {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: 5%;
+}
+.imgapp  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.imgapp a {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgapp img {
+    width: 100%;
+}
+
+/* ---------------- */
+.img-mobile {
+    display: flex;
+}
+.footer__img{
+    margin-top:20%;
+    margin-bottom:0%;
+    width:100%;
+    height: 100%;
+}
+/* ---------------- */
+.footer__qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5%;
+}
+.footer__qr img{
+    margin-top: 15%;
+    width:150px;
+}
+h5 {
+    font-size:150%;
+    text-align: center;
+    color: #fff;
+}
+/* -------------------------------- */
+.footer__middle {
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.footer__links {    
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:70%;
+}
+.footer__links a {
+    font-size: 1.5em;
+    color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+.footer__links a:hover {
+    animation-name: "animate__animated animate__pulse";
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+
+    transition: color 0.3s ease;    
+    color: rgb(3, 250, 106);
+}
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.footer__social nav{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+}
+.footer__social a {
+    display: flex;
+    
+    color: rgb(255, 6, 6);
+}
+.footer__social a:hover {
+    
+    transition: color .3s ease;
+    color: rgb(3, 250, 106);
+}
+.footer__end {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+/* Animations--------------- */
+
+/* media query FOOTER -------- */
+

@@ -1,14 +1,16 @@
-.container__card{
-    
+.container__card{    
     margin: auto;
     margin-top: 1%;
     perspective: 1000px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 .card__father{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
     margin: 20px;
     perspective: 1000px;
 }
@@ -48,6 +50,8 @@
     display: flex;
     justify-content: center;
     background-position: center;
+    background-size: cover;
+
     transform: rotateY(180deg);
 }
 

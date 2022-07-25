@@ -86,7 +86,6 @@ footer {
 }
 .header__home{
     margin-left: 5px;
-    text-decoration: none;
     font-weight: bolder;
     color: #011af5;
 }
@@ -156,8 +155,8 @@ footer {
     min-height: 800px;
     max-height: 800px;
     overflow-y: scroll;
-
 }
+
 .main__scroll::-webkit-scrollbar{
     width:0px;
 }
@@ -173,11 +172,6 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     right: 0;
     z-index: -1;
     opacity: 0.25
-}
-.main__img{
-    width:15em;
-    height:15em;
-    /* estas imagenes la vamos a recortar con una única proporcion para trabajarlas sin dimensiones en css */
 }
 /* CARD DROPDOWN IMAGES */
 /* subtitulos desplegables */
@@ -195,33 +189,29 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     background-color: #969696d3;
     /* continuamos con la falla en regresar la alineación de la fuente a la derecha sin suavidad */
 }
-.main__h3 {
-    font-size: 4em;
-    transition: 3s ease-in;
-    transition-delay: 45s;
-}
-.main__h3:hover {
-    font-family: 'Bebas Neue';
-    font-size: 5em;
-    transition: 1s ease-in;
-    background-color: #fc4ec2a9;
-}
 /* imagenes desplegables */
 .main__section{
     height: 0px;
-    transition: height 6s ease-in;
+    transition: all 6s ease-in;
     transition-delay: 40s;
     display: flex;
-    justify-content:space-evenly;
     align-items: center;
-    object-fit: scale-down;
-    /* scale-down no funciona aún borrando el ancho en .main__img, necesito controlar las dimensiones sin pasar medidas, por ejemplo con scale-down hacerlo */
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .main__h2:hover ~ .main__section {
     height: 300px;
     transition: height 0.5s ease-in;
     transition-delay: .1s;
+}
+/* Gallery--------------------------- */
+.main__gallery {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: auto;
+}
+.about {
+    display: flex;
+    position: fixed;
 }
 /* media query MAIN---------- */
 @media screen and (min-width: 320px) {
@@ -231,7 +221,7 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
         transition: 3s ease-in;
         transition-delay: 45s;
     }
-    .main__h3 {
+    .main__h6 {
         background-color: aqua;
         width: 100%;
         font-size:2em;
@@ -241,7 +231,7 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     }
 }
 @media screen and (min-width:768px) {
-    .main__h3 {
+    .main__h6 {
         width: 100%;
         font-size: 2em;
     }
