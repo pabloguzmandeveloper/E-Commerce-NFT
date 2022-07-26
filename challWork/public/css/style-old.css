@@ -107,29 +107,31 @@ video {
 .main__h2{
     text-align: left;
     font-size: 4em;
-    transition: 3s ease-in;
+    transition: all 3s ease-in;
     transition-delay: 45s;
 }
 .main__h2:hover {
     text-align: center;
     font-family: 'Bebas Neue';
     font-size: 5em;
-    transition: 1s ease-in;
+    transition: all 1s ease-in;
     background-color: #969696d3;
     /* continuamos con la falla en regresar la alineación de la fuente a la derecha sin suavidad */
 }
 /* imagenes desplegables */
 .main__section{
-    height: 0px;
+    max-height: 0px;
     transition: all 6s ease-in;
+    
     transition-delay: 40s;
     display: flex;
+    justify-content: center;
     align-items: center;
     overflow-y: hidden;
 }
 .main__h2:hover ~ .main__section {
-    height: 300px;
-    transition: height 0.5s ease-in;
+    max-height: 10000px;
+    transition: all 0.5s ease-in;
     transition-delay: .1s;
 }
 .about {

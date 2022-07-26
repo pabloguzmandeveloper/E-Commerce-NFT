@@ -34,3 +34,33 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 21/julio/2022
     Comenzando con implemetar media query nos encontramos con que toma una orden solo a los 768px cambiar el tamaño pero otra media con 48px no la toma.
     
+25/julio/2022
+    Arreglando distintos puntos:
+>>>    Aparecía visible la barra de dos scroll, uno de ellos fué porque implementamos la propiedad overflow-y:scroll para lograr ocultar el contenedor desplegado en un determinado tamaño, así que al mismo contenedor le aplicamos el siguiente estilo 
+        body::-webkit-scrollbar{
+    width:0px;
+    }
+        con ello dejamos de ver el scroll que sigue estando pero sin espacio físico visible
+
+>>>      Como el contenedor de todas las cards con imágenes y los subtitulos desplazaban el contenedor de about lo pusimos en 
+    .main__scroll{
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-y: scroll;
+    }
+
+        con ello quedó más ordenado el lugar del about pero al achicar el viewport sigue escalandose en forma no deseada el video aún usando
+    .video{
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    object-fit: cover;
+    }
+>>>    En intentos sin resultado por lograr modificar automáticamente el height de los contenedores desplegables con propiedades de ttransition: all   descubrimos de la mano de un colega experimentado de tantos a consultar, el asunto de que por sentido común queremos aplicar unidades relativas a los valores que manejará transition, y no gente, transition sólo admite valores absolutos únicamente, intentando usar equivocadamente los valores auto ó vh ó vw ó % y en absoluto funcionaban, era por esta razón no de la porque estaba mal estructurado mi hoja de estilo y ó html, aunque puede estarlo en otras partes.
+
+
+

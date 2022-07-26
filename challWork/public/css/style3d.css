@@ -1,6 +1,4 @@
-.container__card{    
-    margin: auto;
-    margin-top: 1%;
+.container__card{
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -21,8 +19,8 @@
 
 
 .card{
-    width:15rem;
-    height: 15rem;
+    width:30vh;
+    height: 30vh;
     position: relative;
     transform-style: preserve-3d;
     transition: all 2s;
@@ -97,11 +95,11 @@
     color: white;
 }
 /* media query CARDS FLIP------ */
-@media screen and (min-width: 1080px){
+/* @media screen and (min-width: 1080px){
     .container__card {
         width: 1080px;
     }
-}
+} */
 
 /* About card----------------------------------- */
 .about{
