@@ -71,3 +71,17 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     
     Siguiendo por eliminar la existencia de grid innecesario en el body ajustamos el ancho final con medidas vw y quedó bien, todavía sobresalen ciertos contenedores con aparentes medidas relativas en %.
 
+    Acabamos de solucionar el escalado del video sin considerar el height del contenedor con el siguiente código:
+
+    .video{
+    display: flex;    
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    min-width: 100vw;  (estos width al sacarlos no toma el centrado)
+    max-width: 100vw;
+    justify-content: center;
+    object-fit: cover;
+    }
+
+    
