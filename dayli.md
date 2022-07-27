@@ -62,5 +62,12 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     }
 >>>    En intentos sin resultado por lograr modificar automáticamente el height de los contenedores desplegables con propiedades de ttransition: all   descubrimos de la mano de un colega experimentado de tantos a consultar, el asunto de que por sentido común queremos aplicar unidades relativas a los valores que manejará transition, y no gente, transition sólo admite valores absolutos únicamente, intentando usar equivocadamente los valores auto ó vh ó vw ó % y en absoluto funcionaban, era por esta razón no de la porque estaba mal estructurado mi hoja de estilo y ó html, aunque puede estarlo en otras partes.
 
-
+>>>     Arrancamos de lleno con las media querys y nos enfocamos primero en el footer con mayor cantidad de contenedores y elementos a organizar en responsive mobile 320x480px orientación portait.
+    La principal dificultad que la entendimos al final fué de que el height del contenedor footer estaba en base a una grid en 3 rows por lo que estas estaban en medidas relativas en fraccion y logramos reducir el aparente margin-bottom con modificar la fraccion de los siguiente:
+    .footer {
+        grid-template-rows: 1fr .75fr 0.18fr;;
+    }
+    Nos queda del footer resolver el tamaño de los iconos sociales que en principio mal lo realizamos desde el HTML.
+    
+    Siguiendo por eliminar la existencia de grid innecesario en el body ajustamos el ancho final con medidas vw y quedó bien, todavía sobresalen ciertos contenedores con aparentes medidas relativas en %.
 
