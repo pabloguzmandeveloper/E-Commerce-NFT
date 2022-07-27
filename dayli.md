@@ -84,4 +84,5 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     object-fit: cover;
     }
 
+    Terminamos el día con que el haber usado medidas con vw fue un error total, en absoluto cuando se escala a otros viewport conserva proporciones.
     
