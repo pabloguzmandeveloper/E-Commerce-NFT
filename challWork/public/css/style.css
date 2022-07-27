@@ -1,208 +1,137 @@
-@import url(/node_modules/animate.css/animate.css) ;
-/* @import url(para importar hojas con colores elegidos por variables) */
 *{
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     text-decoration: none;
 }
-
-html {
-    scroll-behavior: smooth;
-    /* sólo sirve para navegaciones dentro de la misma página con hipervinculos en el href por medio de id */
-}
-@media screen and (max-width: 768px) {
-    *{
-        font-size: 18px;
-    }
-}
-@media screen and (min-width: 480) {
-    * {
-        font-size: 16px;
-    }    
-}
-/* probamos sin exito controlar el tamaño de las fuentes en base a las unidades em desde la raiz */
-/* GRID-NESTED BODY ============================================================== */
-.bodyNested {
+/* BODY =========================================================================== */
+body{
     font-family: 'Bebas Neue';
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 50px;
-    /* algo importante está sucediendo con los tamaños de las rows ya que coloco cualquier medida y no modifica en nada la página aparentemente, lo más importante es dejar un height para el footer de aprox 100px pero en unidad relativa para el responsive */
-    grid-template-areas:
-                        "box1"
-                        "box2"
-                        "box3";
+    /* display: grid;
+    grid-template-rows: 25vh; */
+    /* ANULAMOS ESTAS LÍNEAS porque interfería directamente al background color del header, sin conocer la razón, y modificó acelerando el tiempo de transición de las cards desplegando*/
+    width: 100vw;
+    overflow-y: scroll;
 }
-header {
-    grid-area: "box1";
+body::-webkit-scrollbar{
+    width:0px;
 }
-main {
-    grid-area: "box2";
-}
-footer {
-    grid-area: "box3";
-}
-/* GRID HEADER ============================================================== */
-.header__grid {
-    background-color:hsla(39, 100%, 51%, 0.288);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.5fr 0.5fr;
-    grid-template-areas:
-                        "nav1"
-                        "skate_monkey_h1"
-                        "nft_h2";
-    grid-gap: 0px;
-    padding: 0px;
-}
-.header__nav{
-    /* solucionamos el asunto de dejar la barra en todo el ancho tan simplemente con width 100% */
-    width: 100%;
-    background-color: rgb(255, 206, 47);
-    grid-area: nav1;
-    display: grid;
-    justify-content: space-between;
-    position: fixed;
-
-}
-.header__h1{
-    margin-top: 20px;
-    grid-area: skate_monkey_h1;
-    display: grid;
-    justify-content: center;
-}
-.header__h2{
-    display: grid;
-    grid-area: nft_h2;
-    justify-self: center;
-}
-
-/* flexbox header .......................................................... */
-
-.header__nav {
+/* HEADER ============================================================== */
+header{
+    background-color:hsla(39, 100%, 51%, 0.978);
+    width: 100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    background-color: rgb(255, 206, 47);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height:4%;
+    width: 100vw;
+    z-index: 5;
 }
 .header__home{
-    margin-left: 5px;
+    margin-left: 15px;
+    font-size: 200% ;
     font-weight: bolder;
     color: #011af5;
 }
 .header__h1 {
+    display: flex;
     font-weight: bolder;
-    font-size: 5em;
-    text-align: center;
+    font-size: 6vw;
+    margin-top: 2%;
 }
 .header__h2 {
     font-weight: bolder;
-    font-size: 5em;
-    text-align: center;
+    font-size: 6vw;
 }
 .header__audio{
-    overflow: hidden;
-    width: 0px;
-    height: 0px;
-    /* los controles de sonido desconozco como ocultarlos sin pasar unas dimensiones en CERO, con una ayuda de la web utilizo los elementos del DOM para visualizar los dos botones de paly y pause, pero sin saber como configurar su visual */
+    display: none;
 }
+.header__home{
+    width: 90%;
+}
+header nav button{
+    width: 5%;
+}
+
+/* flexbox header .................................................... */
+
 /* media query HEADER ------------ */
 
-@media screen and (max-width: 768px) {
-    .header__h1, .header__h2 {
-        font-size: 3em;
-        text-align: center;
-    }
-}
-@media screen and (min-width: 480) {
-    .header__h1, .header__h2 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    
-}
-
-/* GRID MAIN ============================================================== */
-.main__grid {
-    background-color: main__bkgvideo;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-                        "spotlight"
-                        "proyect-love"
-                        "feature-collection"
-                        "recen-bids"
-                        "about";
-    grid-gap: 0px;
-    padding: 0px;
-}
-.spotlight {
-    grid-area: spotlight;
-}
-.proyect-love {
-    grid-area: proyect-love;
-}
-.feature-collection {
-    grid-area: feature-collection;
-}
-.recen-bids {
-    grid-area: recen-bids;
-}
-.about {
-    grid-area: about;
-}
+/* MAIN ============================================================== */
 .main__scroll{
-    min-height: 800px;
-    max-height: 800px;
+    min-height: 90vh;
+    max-height: 90vh;
     overflow-y: scroll;
 }
-
 .main__scroll::-webkit-scrollbar{
     width:0px;
 }
-/* webkit-scrollbar-thumb damos el color de fondo al scroll o transparente, border radius mas circular o recto
-webkit-scrollbar-track    maneja un background del fondo de toda la barra */
-/* flexbox main .......................................................... */
-.main__bkgvideo {
-    width: 100%;
-    object-fit: cover;
-    /* cambiamos a position absolute y se arregló el asunto */
+.main__scroll__gallery{
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.main__scroll__gallery::-webkit-scrollbar{
+    width:0px;
+}
+.video{
+    display: flex;    
     position: absolute;
-    left: 0;
-    right: 0;
     z-index: -1;
-    opacity: 0.25
+    opacity: 0.25;
+    min-width: 100vw;
+    max-width: 100vw;
+    justify-content: center;    
+    overflow: hidden;
+}
+
+/* flexbox main ...................................................... */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
 /* CARD DROPDOWN IMAGES */
 /* subtitulos desplegables */
 .main__h2{
-    text-align: left;
-    font-size: 4em;
-    transition: 3s ease-in;
+    text-align: center;
+    font-size: 4vw;
+    transition: all 3s ease-in;
     transition-delay: 45s;
 }
 .main__h2:hover {
     text-align: center;
     font-family: 'Bebas Neue';
-    font-size: 5em;
-    transition: 1s ease-in;
+    font-size: 5vw;
+    transition: all 1s ease-in;
     background-color: #969696d3;
     /* continuamos con la falla en regresar la alineación de la fuente a la derecha sin suavidad */
 }
 /* imagenes desplegables */
 .main__section{
-    height: 0px;
+    max-height: 0px;
     transition: all 6s ease-in;
+    
     transition-delay: 40s;
     display: flex;
+    justify-content: center;
     align-items: center;
     overflow-y: hidden;
 }
 .main__h2:hover ~ .main__section {
-    height: 300px;
-    transition: height 0.5s ease-in;
+    max-height: 10000px;
+    transition: all 0.5s ease-in;
     transition-delay: .1s;
+}
+.about {
+    bottom: 0;
 }
 /* Gallery--------------------------- */
 .main__gallery {
@@ -210,38 +139,16 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     flex-flow: row wrap;
     max-width: auto;
 }
-.about {
-    display: flex;
-    position: fixed;
+.main__scroll__gallery {
+    bottom: 0;
 }
-/* media query MAIN---------- */
-@media screen and (min-width: 320px) {
-    .main__h2 {
-        text-align: left;
-        font-size: 1.5em;
-        transition: 3s ease-in;
-        transition-delay: 45s;
-    }
-    .main__h6 {
-        background-color: aqua;
-        width: 100%;
-        font-size:2em;
-    }
-    .main__section {
-        width: 100%;
-    }
-}
-@media screen and (min-width:768px) {
-    .main__h6 {
-        width: 100%;
-        font-size: 2em;
-    }
-}
+
 /* GRID FOOTER ============================================================== */
+
 .footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 0.2fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     grid-template-areas:
                         "top"
                         "middle"
@@ -260,9 +167,8 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
 .footer__end {
     background-color: #000000;
     grid-area: end;
+    align-items: center;
 }
-/* el footer se me fué arriba al comienzo del main al implementar grid y se arregló cuando pusimos en auto "grid-template-rows: 100px auto 150px;" pero sigue habiendo un espacio vacío que no puedo lograr ocupar con la grid correspondiente a main */
-
 /* flexbox footer ........................................................ */
 .footer__top {
     display: flex;
@@ -297,6 +203,7 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
 /* ---------------- */
 .img-mobile {
     display: flex;
+    margin-bottom: 0;
 }
 .footer__img{
     margin-top:20%;
@@ -312,7 +219,7 @@ webkit-scrollbar-track    maneja un background del fondo de toda la barra */
     margin-right: 5%;
 }
 .footer__qr img{
-    margin-top: 15%;
+    margin-top: 1%;
     width:150px;
 }
 h5 {
@@ -320,12 +227,11 @@ h5 {
     text-align: center;
     color: #fff;
 }
+
 /* -------------------------------- */
 .footer__middle {
     display: flex;
     flex-direction: row;
-    
-
 }
 .footer__links {    
     margin-top: 2%;
@@ -358,22 +264,29 @@ h5 {
     justify-content: center;
     width: 70%;
 }
-.footer__social nav{
+.footer__social h5{
+    display: flex;
+    align-items: flex-start;
+}
+.footer__social nav {
     margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 45%;
+    width: 50%;
+    height: 5%
 }
-.footer__social a {
+.footer__social i {
+    font-size: 50px;
     display: flex;
-    
+    transition: all .8s ease;        
     color: rgb(255, 6, 6);
 }
-.footer__social a:hover {
-    
-    transition: color .3s ease;
+.footer__social i:hover {
     color: rgb(3, 250, 106);
+    font-size: 60px;
+    transition: all 1s ease;
+    
 }
 .footer__end {
     display: flex;
@@ -383,3 +296,144 @@ h5 {
 /* Animations--------------- */
 
 /* media query FOOTER -------- */
+@media  screen and (min-width: 768px) and (max-width:1024px){
+    
+    .header__h1{
+        margin-top: 8%;
+    }
+    header nav {
+        height:3%;
+    }
+    .header__home {
+        font-size:150%;
+    }
+    .body__about_back p {
+        font-size: 18px;
+    }
+    .about__card{
+        width: 80vw;
+        height: 20vh ;
+    }
+}
+
+@media screen and (min-width: 280px ) and (max-width:767px) and (orientation: portrait) {
+    .header__home{
+        width: 80%;
+    }
+    header nav button{
+        width: 10%;
+    }
+    /* ----------------------------- */
+    .main__h2{
+    text-align: center;
+    font-size: 5vw;
+    transition: all 0s ease-in;
+    transition-delay: 0s;
+    background-color: #969696d3;
+}
+.main__h2:hover {
+    transition: all 0s ease-in;
+    background-color: #969696d3;
+    
+}
+/* imagenes desplegables */
+.main__section{
+    max-height: 950px;
+    transition: all 0s ease-in;    
+    transition-delay: 0s;
+}
+.main__h2:hover ~ .main__section {
+    max-height: 1000px;
+    transition: all 0s ease-in;
+    transition-delay: 0s;
+}
+
+    /* ABOUT CARD----------------------------- */
+    .about__father{
+        margin-bottom: 10vw;
+    }
+    
+    .about__father:hover .about__card{
+        transform: rotateY(180deg);
+    }
+    
+    .about__card{
+        width: 90vw;
+        height: 220px ;
+    }   
+
+    .about__back{
+        transform: rotateY(180deg);
+    }
+
+    .body__about_back p{
+        font-size: 14px;
+    }
+    
+    /* FOOTER----------------- */
+    .footer {
+        grid-template-rows: 1fr .75fr 0.18fr;;
+    }
+    .footer__top {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    h5 {
+        margin-top: 2vh;
+        font-size: 5vw;
+        text-align: center;
+        color: #fff;
+    }
+    .footer__app {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        margin: auto;
+        align-items: center;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .footer__qr {
+        display: flex;
+        flex-flow:column wrap;
+        align-items: center;
+        margin: 5vh 0vh 5vh 0vh;
+        
+    }
+    .footer__qr img{
+        margin-top: 5vh;
+        width:50vw;
+    }
+    /* ------------------- */
+    .footer__middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__links {    
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:80%;
+    }
+    .footer__links a {
+        font-size: 6vw;
+        color: rgb(255, 0, 0);
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__social nav {
+        width: 100vw;
+        margin: 5vw;
+    }
+    
+    /* ------------ */
+    .footer__end {
+        font-size: 3.5vw
+    }
+}

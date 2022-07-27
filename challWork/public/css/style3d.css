@@ -94,13 +94,6 @@
     background-color: #69dbf8;
     color: white;
 }
-/* media query CARDS FLIP------ */
-/* @media screen and (min-width: 1080px){
-    .container__card {
-        width: 1080px;
-    }
-} */
-
 /* About card----------------------------------- */
 .about{
     perspective: 1000px;
@@ -121,7 +114,7 @@
 
 
 .about__card{
-    width: 100vh;
+    width: 70vw;
     height: 20vh;
     position: relative;
     transform-style: preserve-3d;
@@ -166,7 +159,8 @@
 }
 
 .body__about_back{
-    padding: 1px;
+    margin: 2% 4% 1% 4%;
+    padding: 2px;
     text-align: center;
     transform: translateZ(80px);
 }
@@ -176,7 +170,7 @@
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 0px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .body__about_back a{
