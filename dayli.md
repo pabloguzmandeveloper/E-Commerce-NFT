@@ -86,3 +86,17 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     Terminamos el día con que el haber usado medidas con vw fue un error total, en absoluto cuando se escala a otros viewport conserva proporciones.
     
+28/julio/2022
+    Finalmente arreglamos el responsive y varias partes más de las que rompen el mismo.
+    En principio con la ayuda del tuto Timoteo vimos que el uso de grid rompía el responsive en parte agregando un espacio en blanco al lateral derecho del header y main, anulando las GRID se arreglaba totalmente.
+
+    Entonces busqué eliminar las grid de el footer en donde sólo se utilizaba como requisito de entrega en usar grids, y puse grid al contenedor general que es main, aún así persistía la misma incidencia.
+
+    Con la ayuda de un colega en discord, en hacer pruebas al señalarme el uso del tamaño de los íconos que tal vez era el problema, probamos con eliminar el margin de los mismos y reeplazarlo por padding del mismo tamaño y se solucionó parcialmente, persiste un ancho la mitad.
+
+    Aparentemente el reset del html no actúa sobre el margin el cual suma al desborde del contenedor padre cuando se implementa grids.
+
+    La observación al momento es que si desactivamos o no usamos grid, se soluciona el espacio vacío de la derecha vertical, y persiste una zona vacia sin conectar el video con el footer.
+
+    
+
