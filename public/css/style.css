@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important;
 }
-/* BODY =========================================================================== */
+/* BODY ================================================================= */
 body{
     font-family: 'Bebas Neue';
     display: grid;
@@ -22,6 +22,9 @@ body::-webkit-scrollbar{
     width:0px;
 }
 /* HEADER ============================================================== */
+nav div ul li a {
+    color: white;
+}
 header{
     grid-area: header;
     background-color:hsla(39, 100%, 51%, 0.978);
@@ -44,13 +47,13 @@ header nav{
     /* padding: 15px; */
     font-size: 25px ;
     font-weight: bolder;
-    color: #011af5;
+    color: #ffffff;
 }
 .header__h1 {
     display: flex;
     font-weight: bolder;
     font-size: 6vw;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 .header__h2 {
     font-weight: bolder;
@@ -66,11 +69,11 @@ header nav button{
     width: 5%;
 }
 
-/* flexbox header .................................................... */
+/* flexbox header ................................................ */
 
 /* media query HEADER ------------ */
 
-/* MAIN ============================================================== */
+/* MAIN =========================================================== */
 main {
     grid-area: main;
 }
@@ -101,7 +104,7 @@ main {
     overflow: hidden;
 }
 
-/* flexbox main ...................................................... */
+/* flexbox main .................................................. */
 main {
     display: flex;
     flex-direction: column;
@@ -454,7 +457,7 @@ h5 {
 }
 
 .body__about_front{
-    font-size: 10vh;
+    font-size: 10vh !important;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -501,7 +504,7 @@ h5 {
 @media  screen and (min-width: 768px) and (max-width:1024px){
     
     .header__h1{
-        margin-top: 8%;
+        margin-top: 13%;
     }
     header nav {
         height:3%;

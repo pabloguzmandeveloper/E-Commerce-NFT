@@ -1,0 +1,24 @@
+{
+  "name": "skate-monkey-guzman",
+  "version": "1.0.0",
+  "description": "work-ecommerce",
+  "main": "index.js",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MYGUDEV/CODERHOUSE-WEB-DEV.git"
+  },
+  "author": "pablo daniel guzman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MYGUDEV/CODERHOUSE-WEB-DEV/issues"
+  },
+  "homepage": "https://github.com/MYGUDEV/CODERHOUSE-WEB-DEV#readme"
+}

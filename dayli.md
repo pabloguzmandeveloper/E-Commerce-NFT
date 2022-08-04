@@ -98,5 +98,16 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     La observación al momento es que si desactivamos o no usamos grid, se soluciona el espacio vacío de la derecha vertical, y persiste una zona vacia sin conectar el video con el footer.
 
+4/agosto/2022
+    Encontramos el error tan simple sobre la falla con grid, y se debia a que en la etiqueta <main> habiamos agregado una s de más, y por ello no la reconocía como tal, aún cuando el editor vsc no reportaba ningún problema.
+
+    Entramos en la fase de implementar Bootstrap, hemos elegido hacer de la barra de navegación superior un elemento con bootstrap para reemplazarla totalmente agregando la funcionalidad de una burguer con las rutas de hipervínculos a las distintas secciones de la página.
+
+    Estamos por decidir el reemplazo y adaptación del resto de los elementos para usar bootstrap.
+
+    Pocas ideas hay pues desde que partimos hemos logrado casi lo que queríamos, tal vez la parte del los bloques con subtitulos con imágenens desplegables refactorizarlos completamente en presentar pestañas a elegir secciones de navegación pero tal vez ver la forma de mantener la visualización permanente de las mismas.
+
+    El footer pocas ideas tenemos de refactorizarlo.
+
     
 
