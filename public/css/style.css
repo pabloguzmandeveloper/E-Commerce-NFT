@@ -68,11 +68,6 @@ header nav{
 header nav button{
     width: 5%;
 }
-
-/* flexbox header ................................................ */
-
-/* media query HEADER ------------ */
-
 /* MAIN =========================================================== */
 main {
     grid-area: main;
@@ -93,6 +88,7 @@ main {
 .main__scroll__gallery::-webkit-scrollbar{
     width:0px;
 }
+/* flexbox main .................................................. */
 .video{
     display: flex;    
     position: absolute;
@@ -103,8 +99,6 @@ main {
     justify-content: center;    
     overflow: hidden;
 }
-
-/* flexbox main .................................................. */
 main {
     display: flex;
     flex-direction: column;
@@ -152,6 +146,11 @@ main {
 .main__scroll__gallery {
     bottom: 0;
 }
+/* bootstrap MAIN-------------------- */
+.carousel-indicators {
+    margin-bottom: -1rem;
+}
+
 
 /* GRID FOOTER ============================================================== */
 footer {
@@ -328,7 +327,7 @@ h5 {
 }
 
 
-.card{
+.cardBlock {
     width:30vh;
     height: 30vh;
     position: relative;
@@ -652,8 +651,7 @@ h5 {
     .footer__social nav {
         width: 100vw;
         padding: 5vw;
-    }
-    
+    }    
     /* ------------ */
     .footer__end {
         font-size: 3.5vw

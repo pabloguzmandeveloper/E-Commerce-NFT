@@ -109,5 +109,13 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     El footer pocas ideas tenemos de refactorizarlo.
 
-    
+5/agosto/2022
+    Decidimos incluir un carrusel con control refactorizandolo con 4 bloques correspondientes al mismo orden de subtitulos que usabamos por cada bloque de imágenes, o sea que reemplazamos el scroll de cadar artículo con sus correspondientes subtitulos h2 con un carrusel dinámico
+
+    Las imágenes logramos conservar la animación 3D de siempre y el detalle a solucionar tal vez al final antes de la entrega es ajustar el borde cuadrado de las cards 3D a el original borde redondeado, aparentemente alguna clase de Bootstrap está interfiriendo.
+
+    Si en las pruebas logramos a este carrusel incluirlo en una barra de navegación para cada articulo de los h2 necesitaremos crear 4 secciones mas de cada una sin carrusel o bien pasar a una sóla página con una columna sin transiciones colapsables muy similar a lo que veniamos realizando antes.
+
+    El borde de las cards lo pudimos reestablecer bien, sucedía que una de las clases de los <div> era class= "card" que coincidía con una de las usadas en bootstrap. La cambiamos por cardBlock y solucionado.
+     
 
