@@ -622,21 +622,21 @@ h5 {
     }
 
     .body__about_back p{
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .about__father {
-        margin-bottom: -5vw;
+        margin-bottom: 5vw;
     }
     .about__card {
-        width: 50vw;
-        height: 30vw
+        width: 70vw;
+        height: 50vw
     }
     .body__aboutBackContact {
         font-size: 10vw
     }
     .sizeTextAboutContact {
-        font-size: 5vw
+        font-size: 10px
     }
     
     /* FOOTER----------------- */

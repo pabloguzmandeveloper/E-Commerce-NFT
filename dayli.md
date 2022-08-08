@@ -153,4 +153,9 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     Corregimos la mayoría de los errores, funciona medianamente bien, falta ocuparnos del responsive y algunos detalles mas tal vez.
 
+8/agosto/2022
+    Logramos el responsive medianamente bien, vamos a quitar el audio por se molesto al navegar.
 
+    Hicimos multiples ajustes con la parte de media query para ajustar los tamaños, con las clases de bootstrap poco logramos entenderlas.
+
+    
