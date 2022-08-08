@@ -117,5 +117,40 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     Si en las pruebas logramos a este carrusel incluirlo en una barra de navegación para cada articulo de los h2 necesitaremos crear 4 secciones mas de cada una sin carrusel o bien pasar a una sóla página con una columna sin transiciones colapsables muy similar a lo que veniamos realizando antes.
 
     El borde de las cards lo pudimos reestablecer bien, sucedía que una de las clases de los <div> era class= "card" que coincidía con una de las usadas en bootstrap. La cambiamos por cardBlock y solucionado.
-     
+    
+7/agosto/2022
+    Implementamos bootstrap a la página de explore.html con un elemento de bootstrap Scroolspy Navbar insertando los bloques de las mismas imagenes en cards 3D para generar un scroll de imánenes ordenados para moverse un poco más comodo por búsqueda sencilla e intuitiva.
+
+    En principio al pegar el código del navbar scrollspy sucedía que la misma barra quedaba oculta debajo de la otra primer barra de navegación, se hicieron intentos de utilizar z-index para generar un scroll con tope superior antes de la primer barra de navegación, sin éxito.
+
+    Entonces en consultar y ver documentación nos topamos con la ayuda de un articulo ( https://www.campusmvp.es/recursos/post/como-usar-position-sticky.aspx ) para implementar sticky , hemos copiado el código de estilo tal cual lo utilizó esta persona y funcionó muy bien sin hacer ajustes.
+
+    #navbar-example2 {
+    position: sticky;
+    top:80px;
+    border:10px solid #1B75CE;
+    display:inline-block;
+}
+
+    con esto fijamos la barra hasta antes de tocar la primer barra.
+
+    Insertamos todas las cards 3D en reemplazo de los textos y no funcionaba el hover de cada una.
+
+    Fue por motivo de coincidencia de una clase que usa bootstrap, la clase .card , la modificamos en los estilos por .cardBlock pero no lo hicimos en el hover. Corregido ya funcionaba todo de maravilla.
+
+    Armando la barra de navegación de las imágenes en explre.html existen dificultades en que tenga buen funcionamiento con redireccionar bien los hipervinculos con los botones de navegación, los pone a los subtitulos fuera de lugar, generalmente mas arriba donde no se ven.
+
+    Intentamos implementar overflow-y: scroll con 
+    .main__scroll{
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+.main__scroll::-webkit-scrollbar{
+    width:0px;
+}
+    y los controles se comportan muy mal, si se arregla la continuidad entre footer, video background y header, sin espacios en blanco.
+
+    Corregimos la mayoría de los errores, funciona medianamente bien, falta ocuparnos del responsive y algunos detalles mas tal vez.
+
 

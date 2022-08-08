@@ -33,16 +33,15 @@ header{
     flex-direction: column;
     align-items: center;
 }
-header nav{
+/* header nav{
     background-color: rgb(255, 206, 47);
     position: fixed;
-    /* top: 0;
-    left: 0; */
+
     display: flex;
-    height: 30px;
+    height: 20px;
     width: 100vw;
     z-index: 5;
-}
+} */
 .header__home{
     /* padding: 15px; */
     font-size: 25px ;
@@ -92,6 +91,7 @@ main {
 .video{
     display: flex;    
     position: absolute;
+    top: 40vh;
     z-index: -1;
     opacity: 0.25;
     min-width: 100vw;
@@ -120,7 +120,7 @@ main {
     background-color: #969696d3;
 }
 /* imagenes desplegables */
-.main__section{
+/* .main__section{
     max-height: 0px;
     transition: all 6s ease-in;    
     transition-delay: 40s;
@@ -133,22 +133,47 @@ main {
     max-height: 10000px;
     transition: all 0.5s ease-in;
     transition-delay: .1s;
-}
+} */
 .about {
     bottom: 0;
 }
 /* Gallery--------------------------- */
-.main__gallery {
+/* .main__gallery {
     display: flex;
     flex-flow: row wrap;
     max-width: auto;
-}
+} */
 .main__scroll__gallery {
     bottom: 0;
 }
 /* bootstrap MAIN-------------------- */
 .carousel-indicators {
     margin-bottom: -1rem;
+}
+/* Contact -------------------------- */
+.main__contact {
+    justify-items: center;
+}
+.form__email {
+    background-color: rgba(255, 140, 0, 0.342);
+    padding: 2%
+}
+/* Explore MAIN --------------------- */
+#navbar-example2 {
+    position: sticky;
+    top:60px;
+    border:10px solid #1B75CE;
+    z-index: 1;
+}
+.bg-transparent {
+    --bs-bg-opacity: 0;
+}
+.contCardImg {
+    z-index: 0;
+}
+/* About MAIN ------------------------*/
+.singleCardAbout {
+    --bs-card-bg: rgba(255, 255, 255, 0);
 }
 
 
@@ -307,7 +332,7 @@ h5 {
 /* Animations--------------- */
 /* STYLE 3D  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-.container__card{
+.contCardImg{
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -322,7 +347,7 @@ h5 {
     perspective: 1000px;
 }
 
-.card__father:hover .card{
+.card__father:hover .cardBlock{
     transform: rotateY(180deg);
 }
 
@@ -472,6 +497,22 @@ h5 {
     padding: 2px;
     text-align: center;
     transform: translateZ(80px);
+}
+
+.body__aboutBackContact{
+    font-size: 10vh !important;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(5, 5, 5, 0.808);
+    transform: translateZ(80px);
+}
+.sizeTextAboutContact {
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 .body__about_back p{
