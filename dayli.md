@@ -158,4 +158,15 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     Hicimos multiples ajustes con la parte de media query para ajustar los tamaños, con las clases de bootstrap poco logramos entenderlas.
 
+12/agosto/2022
+    Hace 4 días comenzamos a trabajar con SASS, elegimos utilizar los archivos tipo SCSS y la estructura de directorios 7-1, sencillamente atomizamos lo mejor posible todas las partes del style.css en archivos para unirlos en un solo archivo con importaciones de SASS, el archivo es style.scss,
+
+    Hemos observado que iniciamos la mudanza y sin probar en el navegador como impactaba cada paso del header, hay un inconveniente con la alineación del navbar y el display: none del reproductor de audio.
+
+    Esto lo vamos a revisar más adelante para lograr completa la mudanza sin errores.
+
+    Con el live server y la compilación de sass a la par sin incidencias importantes, salvo la primera que pasamos por alto el cuidado de usar el live server con los primeros pasos.
+
+    Observamos que en algunas situaciones repetimos código ya que en css podiamos concentrar en dos clases las mismas propiedades, cuando con el nesting tiene que ir las propiedades por cada clase a ser que creemos una variable si el tiempo nos da y la utilicemos con menos código.
+
     

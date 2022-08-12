@@ -1,0 +1,10 @@
+/* Explore MAIN --------------------- */
+#navbar-example2 {
+    position: sticky;
+    top:60px;
+    border:10px solid #1B75CE;
+    z-index: 1;
+}
+.bg-transparent {
+    --bs-bg-opacity: 0;
+}

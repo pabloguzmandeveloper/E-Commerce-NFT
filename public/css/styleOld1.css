@@ -1,11 +1,11 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none !important;
-} */
+}
 /* BODY ================================================================= */
-/* body{
+body{
     font-family: 'Bebas Neue';
     display: grid;
     grid-template-columns: 1fr;
@@ -13,7 +13,7 @@
     grid-template-areas:
                         "header"
                         "main"
-                        "footer"; */
+                        "footer";
     /*volvimos a utilizar grid en el body porque usar grid sólo en el footer nos trajo conflictos a agregar un espacio en blanco en el lateral derecho*/
     width: 100vw;
     overflow-y: scroll;
@@ -68,7 +68,7 @@ header nav button{
 main {
     grid-area: main;
 }
-.main__scroll{
+/* .main__scroll{
     min-height: 90vh;
     max-height: 90vh;
     overflow-y: scroll;
@@ -83,7 +83,7 @@ main {
 }
 .main__scroll__gallery::-webkit-scrollbar{
     width:0px;
-}
+} aparentemente lo dejamos de usar cuando implementamos bootstrap*/
 /* flexbox main .................................................. */
 .video{
     display: flex;    

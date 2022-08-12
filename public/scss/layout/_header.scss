@@ -1,0 +1,58 @@
+nav {
+    div
+    .navBarTopSKMKNFT {
+        a 
+        .header__home {            
+            font-size: 25px ;
+            font-weight: bolder;
+            color: #ffffff;
+            width: 90%;
+
+            .nftNone {
+                display: none;
+            }
+            
+        }
+        
+        
+        
+        ul {
+            li {
+                a {color: white;
+                }
+            }
+        }
+    }
+}
+
+#player {
+    display: none;
+}
+
+.navbar-dark {
+    background-color:rgb(0, 0, 0);
+}
+
+header{
+    background-color:hsla(39, 100%, 51%, 0.978);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header__h1 {
+        display: flex;
+        font-weight: bolder;
+        font-size: 5vw;
+        margin-top: 3%;
+    }
+    
+    .header__h2 {
+        font-weight: bolder;
+        font-size: 5vw;
+    }
+}
+
+header nav button{
+    width: 5%;
+}

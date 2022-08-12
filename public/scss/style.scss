@@ -1,3 +1,15 @@
 @import "base/_reset.scss";
 @import "base/_fonts-family.scss";
-@import "layout/grid.scss"
+@import "themes/_general-theme.scss";
+@import "layout/_grid.scss";
+@import "layout/_header.scss";
+@import "layout/_main.scss";
+@import "layout/_footer.scss";
+@import "views/_index.scss";
+@import "views/_explore.scss";
+@import "views/_about.scss";
+@import "views/_contact.scss";
+@import "views/_blog.scss";
+
+@import "components/_buttons.scss";
+
