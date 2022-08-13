@@ -1,8 +1,6 @@
 nav {
-    div
     .navBarTopSKMKNFT {
-        a 
-        .header__home {            
+        a {            
             font-size: 25px ;
             font-weight: bolder;
             color: #ffffff;
@@ -10,11 +8,8 @@ nav {
 
             .nftNone {
                 display: none;
-            }
-            
+            }            
         }
-        
-        
         
         ul {
             li {
@@ -34,7 +29,7 @@ nav {
 }
 
 header{
-    background-color:hsla(39, 100%, 51%, 0.978);
+    background-color:hsl(39, 100%, 51%);
     width: 100vw;
     display: flex;
     flex-direction: column;
