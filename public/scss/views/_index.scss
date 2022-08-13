@@ -93,16 +93,8 @@
                 }
             }
         }
-
-
     }
 }
-
-
-
-
-
-
 
 /* About card----------------------------------- */
 .about{
@@ -111,106 +103,90 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    /* position: absolute; */
-}
-.about__father{
-    margin: 20px;
-    perspective: 1000px;
-}
 
-.about__father:hover .about__card{
-    transform: rotateX(180deg);
-}
+    .about__father{
+        margin: 20px;
+        perspective: 1000px;
 
+        &:hover .about__card{
+            transform: rotateX(180deg);
+        }
 
-.about__card{
-    width: 30vw;
-    height: 20vh;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 2s;
-}
+        .about__card{
+            width: 30vw;
+            height: 20vh;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 2s;
 
-.about__front{
-    background-size: cover;
-    background-position: center;
-}
+            .about__front,
+            .about__back{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                border-radius: 20px;
+            }
 
-.about__front,
-.about__back{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    border-radius: 20px;
-}
+            .about__front{
+                background-size: cover;
+                background-position: center;
+                
+                .body__about_front{
+                    font-size: 5vh;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(0, 0, 0);
+                    transform: translateZ(80px);
+                }
+            }
 
-.about__back{
-    display: flex;
-    align-items: center;
-    transform: rotateX(180deg);
-    background: rgb(255, 206, 47);
-}
+            .about__back{
+                display: flex;
+                align-items: center;
+                transform: rotateX(180deg);
+                background: rgb(255, 206, 47);
 
-.body__about_front{
-    font-size: 5vh;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    transform: translateZ(80px);
-}
+                .body__about_back{
+                    margin: 2% 4% 1% 4%;
+                    padding: 2px;
+                    text-align: center;
+                    transform: translateZ(80px);
 
-.body__about_back{
-    margin: 2% 4% 1% 4%;
-    padding: 2px;
-    text-align: center;
-    transform: translateZ(80px);
-}
+                    p {
+                        margin-top: 10px;
+                        margin-left: 25px;
+                        margin-right: 25px;
+                        margin-bottom: -10px;
+                        font-size: 14px;
+                    }
 
-.body__aboutBackContact{
-    
-    font-size: 8vh;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateZ(80px);
-}
-.sizeTextAboutContact {
-    font-size: 1.5vw;
-    text-align: center;
-}
+                    a{
+                        padding: 8px 10px;
+                        margin-top: -10px;
+                        font-size: 10px;
+                        cursor: pointer;
+                        border: none;
+                        color: white;
+                        background: #58B0F6;
+                        box-shadow: 1px 1px 30px -5px #58B0F6;
+                        border-radius: 14px;
+                        transition: box-shadow 600ms;
 
-.body__about_back p{
-    margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: -10px;
-    font-size: 14px;
-}
+                        &:hover{
+                            box-shadow: 1px 1px 30px 0px #f70707;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-.body__about_back a{
-    padding: 8px 10px;
-    margin-top: -10px;
-    font-size: 10px;
-    cursor: pointer;
-    border: none;
-    color: white;
-    background: #58B0F6;
-    box-shadow: 1px 1px 30px -5px #58B0F6;
-    border-radius: 14px;
-    transition: box-shadow 600ms;
-}
-
-.body__about_back a:hover{
-    box-shadow: 1px 1px 30px 0px #f70707;
 }
