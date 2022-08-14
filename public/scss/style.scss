@@ -12,6 +12,209 @@
 @import "views/_blog.scss";
 @import "vendors/_bootstrap.scss";
 
-@import "components/_buttons.scss";
 
-@import "res/_media-query.scss";
+
+@media  screen and (min-width: 768px) and (max-width:1024px){
+    
+    header .header__h1 {
+        margin-top: 8%;
+    }
+
+    nav .navBarTopSKMKNFT a {
+        font-size:130%;
+    }
+
+    .about .about__father .about__card .about__back .body__about_back p {
+        font-size: 18px;
+    }
+
+    .about .about__father .about__card {
+        width: 80vw;
+        height: 20vh ;
+    }
+    
+    .footer__middle .footer__social i {
+        font-size: 25px;
+    }
+
+    .about .about__father .about__card .about__front .body__about_front {
+        font-size: 3vh;
+    }
+
+    .sizeTextAboutContact {
+        font-size: 4vw
+    }
+}
+
+
+@media screen and (min-width: 280px ) and (max-width:767px) and (orientation: portrait) {
+    header {        
+        height: 30px
+    }
+
+    header .header__h1 {
+        display: none;
+    }
+
+    header .header__h2 {
+        display:none
+    }
+
+    nav .navBarTopSKMKNFT a .nftNone {
+        display: inline;
+    }
+
+    .navbar-dark {
+        background-color:hsla(39, 100%, 51%);
+        height: 40px
+
+    }
+
+    nav .navBarTopSKMKNFT .navbar-brand {
+        color: #000000
+    }
+
+    .navbar-toggler {
+        background-color: #000000;
+        font-size: 10px
+    }
+
+    .navBarTopSKMKNFT {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        margin-top: -8px;
+    }
+    
+    /* ----------------------------- */
+    main .main__h2{
+        margin-top: 15px;
+        text-align: center;
+        font-size: 5vw;
+        transition: all 0s ease-in;
+        transition-delay: 0s;
+        background-color: #969696d3;
+    }
+    main .main__h2:hover {
+        transition: all 0s ease-in;
+        background-color: #969696d3;        
+    }
+    /* imagenes desplegables */
+    main .main__section{
+        max-height: 950px;
+        transition: all 0s ease-in;    
+        transition-delay: 0s;
+    }
+    main .main__h2:hover ~ .main__section {
+        max-height: 1000px;
+        transition: all 0s ease-in;
+        transition-delay: 0s;
+    }
+    main .carousel-item .imgNone {
+        display: none;
+    }
+    /* ABOUT CARD----------------------------- */
+    .about .about__father{
+        margin-bottom: 5vw;
+
+        &:hover .about__card {
+            transform: rotateY(180deg);
+        }
+
+        .about__card {
+            width: 90vw;
+            height: 50vw;
+
+            .about__back{
+                transform: rotateY(180deg);
+
+                .body__about_back p {
+                    font-size: 11px;
+                    margin-top: 0px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .body__aboutBackContact {
+        font-size: 10vw
+    }
+
+    .sizeTextAboutContact {
+        font-size: 16px
+    }
+    
+    /* FOOTER----------------- */
+    
+    .footer__top {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .footer__app {
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            margin: auto;
+            align-items: center;
+
+            h5 {
+                margin-top: 2vh;
+                font-size: 5vw;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+    
+    
+    .img-mobile {
+        display: none;
+    }
+    .footer__qr {
+        display: flex;
+        flex-flow:column wrap;
+        align-items: center;
+        margin: 5vh 0vh 5vh 0vh;
+        
+    }
+    .footer__qr img{
+        margin-top: 5vh;
+        width:50vw;
+    }
+    /* ------------------- */
+    .footer__middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__links {    
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:80%;
+    }
+    .footer__links a {
+        font-size: 6vw;
+        color: rgb(255, 0, 0);
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__social nav {
+        width: 100vw;
+        padding: 5vw;
+    }    
+    /* ------------ */
+    .footer__end {
+        font-size: 3.5vw
+    }
+    .footer__social i {
+        font-size: 25px;
+    }
+}
