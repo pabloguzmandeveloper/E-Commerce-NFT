@@ -169,4 +169,11 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     Observamos que en algunas situaciones repetimos código ya que en css podiamos concentrar en dos clases las mismas propiedades, cuando con el nesting tiene que ir las propiedades por cada clase a ser que creemos una variable si el tiempo nos da y la utilicemos con menos código.
 
-    
+14/agosto/2022
+    Finalmente completamos bien la etapa de SASS, realizamos en forma equivocada pasar las declaraciones de estilos con la ruta abreviada clásica de css, SASS necesita la ruta completa o hacer bien el nesting de cada estilo.
+
+    Esto se lo puede comprobar cuando pasamos un estilo de distintos elementos y clases, al compilarlo el archivo final copilado (style.css) observamos que a cada estilo le otrorga individualmente la ruta completa o contexto de donde se realiza el estilo sin importar que se repita, tal vez sea por una medida de seguridad para que nunca se sobreescriban estilos.
+
+    En principio declaramos los estilos con la ruta completa y luego hicimos el nesting apropiado.
+
+    Como pendiente por la falta de tiempo tenemos que ajustar el segundo navbar del explore.html en mobile es muy grande, y realizar la implementación con variables para SASS.

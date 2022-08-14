@@ -494,18 +494,18 @@ h5 {
   nav .navBarTopSKMKNFT a {
     font-size: 130%;
   }
-  .about .about__father .about__card .about__back .body__about_back p {
-    font-size: 18px;
-  }
   .about .about__father .about__card {
     width: 80vw;
     height: 20vh;
   }
-  .footer__middle .footer__social i {
-    font-size: 25px;
-  }
   .about .about__father .about__card .about__front .body__about_front {
     font-size: 3vh;
+  }
+  .about .about__father .about__card .about__back .body__about_back p {
+    font-size: 18px;
+  }
+  .footer__middle .footer__social i {
+    font-size: 25px;
   }
   .sizeTextAboutContact {
     font-size: 4vw;
@@ -521,26 +521,26 @@ h5 {
   header .header__h2 {
     display: none;
   }
-  nav .navBarTopSKMKNFT a .nftNone {
-    display: inline;
-  }
   .navbar-dark {
     background-color: hsl(39deg, 100%, 51%);
     height: 40px;
   }
-  nav .navBarTopSKMKNFT .navbar-brand {
-    color: #000000;
-  }
-  .navbar-toggler {
-    background-color: #000000;
-    font-size: 10px;
-  }
-  .navBarTopSKMKNFT {
+  .navbar-dark .navBarTopSKMKNFT {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: -8px;
+  }
+  .navbar-dark .navBarTopSKMKNFT .navbar-brand {
+    color: #000000;
+  }
+  .navbar-dark .navBarTopSKMKNFT .navbar-brand .nftNone {
+    display: inline;
+  }
+  .navbar-dark .navBarTopSKMKNFT .navbar-toggler {
+    background-color: #000000;
+    font-size: 10px;
   }
   /* ----------------------------- */
   main .main__h2 {
@@ -555,6 +555,9 @@ h5 {
     transition: all 0s ease-in;
     background-color: rgba(150, 150, 150, 0.8274509804);
   }
+  main #navbar-example2 {
+    top: 40px;
+  }
   /* imagenes desplegables */
   main .main__section {
     max-height: 950px;
@@ -565,6 +568,13 @@ h5 {
     max-height: 1000px;
     transition: all 0s ease-in;
     transition-delay: 0s;
+  }
+  main .carousel-item {
+    height: 90vh;
+  }
+  main .carousel-item .contCardImg .cardBlock {
+    width: 22vh;
+    height: 22vh;
   }
   main .carousel-item .imgNone {
     display: none;
@@ -614,16 +624,16 @@ h5 {
     text-align: center;
     color: #fff;
   }
-  .img-mobile {
+  .footer__top .img-mobile {
     display: none;
   }
-  .footer__qr {
+  .footer__top .footer__qr {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     margin: 5vh 0vh 5vh 0vh;
   }
-  .footer__qr img {
+  .footer__top .footer__qr img {
     margin-top: 5vh;
     width: 50vw;
   }
@@ -633,7 +643,7 @@ h5 {
     flex-direction: column;
     align-items: center;
   }
-  .footer__links {
+  .footer__middle .footer__links {
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: flex;
@@ -642,22 +652,22 @@ h5 {
     align-items: center;
     width: 80%;
   }
-  .footer__links a {
+  .footer__middle .footer__links a {
     font-size: 6vw;
     color: rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
   }
-  .footer__social nav {
+  .footer__middle .footer__social nav {
     width: 100vw;
     padding: 5vw;
+  }
+  .footer__middle .footer__social nav a i {
+    font-size: 25px;
   }
   /* ------------ */
   .footer__end {
     font-size: 3.5vw;
-  }
-  .footer__social i {
-    font-size: 25px;
   }
 }
 
