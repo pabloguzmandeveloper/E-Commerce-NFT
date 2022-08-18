@@ -3,7 +3,7 @@ nav {
         a {            
             font-size: 25px ;
             font-weight: bolder;
-            color: #ffffff;
+            color: $navbarHome;
             width: 90%;
 
             .nftNone {
@@ -28,7 +28,7 @@ nav {
     background-color:rgb(0, 0, 0);
 }
 
-header{
+header {
     background-color:hsl(39, 100%, 51%);
     width: 100vw;
     display: flex;
@@ -48,6 +48,6 @@ header{
     }
 }
 
-header nav button{
+header nav button {
     width: 5%;
 }

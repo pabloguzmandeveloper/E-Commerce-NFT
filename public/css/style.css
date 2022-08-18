@@ -35,10 +35,14 @@ body footer {
   grid-area: footer;
 }
 
+body main #carouselIndexHome {
+  height: 70vh;
+}
+
 nav .navBarTopSKMKNFT a {
   font-size: 25px;
   font-weight: bolder;
-  color: #ffffff;
+  color: pink;
   width: 90%;
 }
 nav .navBarTopSKMKNFT a .nftNone {
@@ -89,7 +93,6 @@ main {
 main .video {
   display: flex;
   position: absolute;
-  /* top: 40vh; */
   z-index: -1;
   opacity: 0.25;
   min-width: 100vw;
@@ -146,7 +149,7 @@ main .contCardImg {
 .footer__top .footer__app h5 {
   font-size: 150%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .footer__top .footer__app .imgapp {
   display: flex;
@@ -183,7 +186,7 @@ main .contCardImg {
 .footer__top .footer__qr h5 {
   font-size: 150%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .footer__top .footer__qr img {
   margin-top: 1%;
@@ -206,7 +209,7 @@ main .contCardImg {
 .footer__middle .footer__links h5 {
   font-size: 150%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .footer__middle .footer__links a {
   font-size: 1.5em;
@@ -234,7 +237,7 @@ main .contCardImg {
   align-items: flex-start;
   font-size: 150%;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .footer__middle .footer__social nav {
   margin-top: 5%;
@@ -259,7 +262,7 @@ main .contCardImg {
 .footer__end {
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* STYLE 3D */

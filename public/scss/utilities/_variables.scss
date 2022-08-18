@@ -1,0 +1,31 @@
+// Colors of header
+$navbarHome: pink;
+
+
+// Colors of footer
+$bg-top: #252525;
+$bg-mdd: #000000;
+$bg-end: #000000;
+$color-h5: #ffffff;
+$color-links: rgb(255, 0, 0);
+$color-lk-animat: rgb(3, 250, 106);
+$color-icon-social:  rgb(255, 6, 6);
+$color-icon-animat: rgb(3, 250, 106);
+$color-foot-end: #ffffff;
+
+// Layout body
+$wd-car-control: 5%;
+$hg-co-cardImg: auto;
+$height-body-index: 70vh;
+$hg-car-inn: 70vh;
+
+
+@mixin car-fath {
+    height: 50vh;
+    width: 50vh
+};
+
+@mixin cardBlock {
+    height:50vh;
+    width: 50vh
+};

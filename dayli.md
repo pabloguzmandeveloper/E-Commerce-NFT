@@ -177,3 +177,21 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
     En principio declaramos los estilos con la ruta completa y luego hicimos el nesting apropiado.
 
     Como pendiente por la falta de tiempo tenemos que ajustar el segundo navbar del explore.html en mobile es muy grande, y realizar la implementación con variables para SASS.
+
+16/agosto/2022
+    Iniciamos algunos ajustes de tamaños para continuar en aplicar variables, mixin, operaciones, bucles, condicionales, each, map, extend, etc.
+
+    Algo de todo esto tal vez implementemos un each en lo referido a media query donde se necesitan distintas configuraciones de cada elemento para reunirlas en una variable con un array de estas configuraciones. Va a ser difícil y con cuidado lo estudiaremos.
+
+    O bien volcarnos a lograr un estilo en el título principal para lograr un efecto de movimiento con cada letra del mismo, el efecto flip lo llamamos.
+
+17/agosto/2022
+    Dimos primeros pasos en implementar variables en SASS y evaluando las características del reemplazo del @import por @use, y tan directo no lo es ya que como medida de seguridad el @use necesita especificar el origen de cada importación o uso de archivo, entonces en cada archivo que se utilice alguna variable hay que usar @use. Distinto del @import cuando las variables son de uso global y no local.
+
+    Un tema a consultar con el profesor el reemplazo de @import
+
+    Un pequeño paso en el SEO fué poner una metadata en el head con la descripción en inglés de nuestro sitio.
+
+    Hicimos un test en Lighthouse y antes de este commit nos dió un 85% como resultado y un SEO en también un 85%.
+
+    En los principios del proyecto procuramos disponer una estructura coherente con h1, sus subtitulos h2, etc. Tal vez eso ayudó a esta calificación, vale mejorarla.
