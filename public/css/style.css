@@ -83,12 +83,9 @@ header nav button {
 }
 
 main {
-  /* flexbox main .................................................. */
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* Caurosel index */
-  /* bootstrap MAIN-------------------- */
 }
 main .video {
   display: flex;
@@ -133,7 +130,6 @@ main .contCardImg {
   align-items: center;
 }
 
-/* flexbox footer ........................................................ */
 .footer__top {
   display: flex;
   flex-flow: row nowrap;
@@ -265,8 +261,19 @@ main .contCardImg {
   color: #ffffff;
 }
 
-/* STYLE 3D */
+.card-sizer, .contCardImg .card__father .cardBlock .card__back, .contCardImg .card__father .cardBlock .card__front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
 .contCardImg {
+  height: 60vh;
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -283,21 +290,13 @@ main .contCardImg {
   transform: rotateY(180deg);
 }
 .contCardImg .card__father .cardBlock {
-  width: 30vh;
-  height: 30vh;
+  height: 50vh;
+  width: 50vh;
   position: relative;
   transform-style: preserve-3d;
   transition: all 2s;
 }
 .contCardImg .card__father .cardBlock .card__front {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  border-radius: 20px;
   background-size: cover;
   background-position: center;
 }
@@ -314,14 +313,6 @@ main .contCardImg {
   transform: translateZ(100px);
 }
 .contCardImg .card__father .cardBlock .card__back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
   background-position: center;
@@ -351,7 +342,6 @@ main .contCardImg {
   box-shadow: 1px 1px 30px 0px #e31021;
 }
 
-/* About card----------------------------------- */
 .about {
   perspective: 1000px;
   display: flex;
@@ -434,19 +424,28 @@ main .contCardImg {
   box-shadow: 1px 1px 30px 0px #f70707;
 }
 
-/* Explore MAIN --------------------- */
-#navbar-example2 {
+main .video {
+  display: flex;
+  position: fixed;
+}
+main #navbar-example2 {
   position: sticky;
   top: 60px;
   border: 10px solid #1B75CE;
   z-index: 1;
+}
+main .scrollspy-example .contCardImg {
+  height: auto;
+}
+main .scrollspy-example .contCardImg .cardBlock {
+  height: 50vh;
+  width: 50vh;
 }
 
 .bg-transparent {
   --bs-bg-opacity: 0;
 }
 
-/* About MAIN ------------------------*/
 .singleCardAbout {
   --bs-card-bg: rgba(255, 255, 255, 0);
 }
@@ -454,7 +453,6 @@ main .contCardImg {
   bottom: 0;
 }
 
-/* Contact -------------------------- */
 .main__contact {
   justify-items: center;
 }
@@ -490,63 +488,86 @@ h5 {
   padding-bottom: 0;
 }
 
+@media screen and (min-width: 1025px) {
+  main .carousel-item .contCardImg .card__father {
+    height: 60vh;
+  }
+  main .carousel-item .contCardImg .card__father .imgNone {
+    display: none;
+  }
+  main .carousel-control-next {
+    justify-content: end;
+  }
+  main .carousel-control-prev {
+    justify-content: start;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  header .header__h1 {
+  body header .header__h1 {
     margin-top: 8%;
   }
-  nav .navBarTopSKMKNFT a {
+  body nav .navBarTopSKMKNFT a {
     font-size: 130%;
   }
-  .about .about__father .about__card {
+  body main .carousel-inner {
+    height: 80vh;
+  }
+  body main .carousel-inner .carousel-item .contCardImg .cardBlock {
+    height: 30vh;
+    width: 30vh;
+  }
+  body main .about .about__father .about__card {
     width: 80vw;
     height: 20vh;
   }
-  .about .about__father .about__card .about__front .body__about_front {
+  body main .about .about__father .about__card .about__front .body__about_front {
     font-size: 3vh;
   }
-  .about .about__father .about__card .about__back .body__about_back p {
+  body main .about .about__father .about__card .about__back .body__about_back p {
     font-size: 18px;
   }
-  .footer__middle .footer__social i {
+  body .footer__middle .footer__social i {
     font-size: 25px;
   }
-  .sizeTextAboutContact {
+  body .sizeTextAboutContact {
     font-size: 4vw;
   }
 }
 @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: portrait) {
-  header {
+  body header {
     height: 30px;
   }
-  header .header__h1 {
+  body header .header__h1 {
     display: none;
   }
-  header .header__h2 {
+  body header .header__h2 {
     display: none;
   }
-  .navbar-dark {
+  body .navbar-dark {
     background-color: hsl(39deg, 100%, 51%);
     height: 40px;
   }
-  .navbar-dark .navBarTopSKMKNFT {
+  body .navbar-dark .navBarTopSKMKNFT {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: -8px;
   }
-  .navbar-dark .navBarTopSKMKNFT .navbar-brand {
+  body .navbar-dark .navBarTopSKMKNFT .navbar-brand {
     color: #000000;
   }
-  .navbar-dark .navBarTopSKMKNFT .navbar-brand .nftNone {
+  body .navbar-dark .navBarTopSKMKNFT .navbar-brand .nftNone {
     display: inline;
   }
-  .navbar-dark .navBarTopSKMKNFT .navbar-toggler {
+  body .navbar-dark .navBarTopSKMKNFT .navbar-toggler {
     background-color: #000000;
     font-size: 10px;
   }
-  /* ----------------------------- */
-  main .main__h2 {
+  body main #carouselIndexHome {
+    height: 92vh;
+  }
+  body main .main__h2 {
     margin-top: 15px;
     text-align: center;
     font-size: 5vw;
@@ -554,99 +575,105 @@ h5 {
     transition-delay: 0s;
     background-color: rgba(150, 150, 150, 0.8274509804);
   }
-  main .main__h2:hover {
+  body main .main__h2:hover {
     transition: all 0s ease-in;
     background-color: rgba(150, 150, 150, 0.8274509804);
   }
-  main #navbar-example2 {
-    top: 40px;
-  }
-  /* imagenes desplegables */
-  main .main__section {
+  body main .main__section {
     max-height: 950px;
     transition: all 0s ease-in;
     transition-delay: 0s;
   }
-  main .main__h2:hover ~ .main__section {
+  body main .main__h2:hover ~ .main__section {
     max-height: 1000px;
     transition: all 0s ease-in;
     transition-delay: 0s;
   }
-  main .carousel-item {
+  body main .carousel-item {
     height: 90vh;
   }
-  main .carousel-item .contCardImg .cardBlock {
-    width: 22vh;
+  body main .carousel-item .contCardImg .cardBlock {
     height: 22vh;
+    width: 22vh;
   }
-  main .carousel-item .imgNone {
+  body main .carousel-item .imgNone {
     display: none;
   }
-  /* ABOUT CARD----------------------------- */
-  .about .about__father {
+  body main #navbar-example2 {
+    top: 40px;
+    height: 40px;
+    border: 5px solid #281a06;
+    font-size: 8px;
+  }
+  body main #navbar-example2 a {
+    font-size: 8px;
+  }
+  body main .scrollspy-example .contCardImg .cardBlock {
+    height: 40vh;
+    width: 40vh;
+  }
+  body .about .about__father {
     margin-bottom: 5vw;
   }
-  .about .about__father:hover .about__card {
+  body .about .about__father:hover .about__card {
     transform: rotateY(180deg);
   }
-  .about .about__father .about__card {
+  body .about .about__father .about__card {
     width: 90vw;
     height: 50vw;
   }
-  .about .about__father .about__card .about__back {
+  body .about .about__father .about__card .about__back {
     transform: rotateY(180deg);
   }
-  .about .about__father .about__card .about__back .body__about_back p {
+  body .about .about__father .about__card .about__back .body__about_back p {
     font-size: 11px;
     margin-top: 0px;
     margin-left: 5px;
     margin-right: 5px;
   }
-  .body__aboutBackContact {
+  body .body__aboutBackContact {
     font-size: 10vw;
   }
-  .sizeTextAboutContact {
+  body .sizeTextAboutContact {
     font-size: 16px;
   }
-  /* FOOTER----------------- */
-  .footer__top {
+  body .footer__top {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
   }
-  .footer__top .footer__app {
+  body .footer__top .footer__app {
     display: flex;
     flex-direction: column;
     width: 80vw;
     margin: auto;
     align-items: center;
   }
-  .footer__top .footer__app h5 {
+  body .footer__top .footer__app h5 {
     margin-top: 2vh;
     font-size: 5vw;
     text-align: center;
     color: #fff;
   }
-  .footer__top .img-mobile {
+  body .footer__top .img-mobile {
     display: none;
   }
-  .footer__top .footer__qr {
+  body .footer__top .footer__qr {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     margin: 5vh 0vh 5vh 0vh;
   }
-  .footer__top .footer__qr img {
+  body .footer__top .footer__qr img {
     margin-top: 5vh;
     width: 50vw;
   }
-  /* ------------------- */
-  .footer__middle {
+  body .footer__middle {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .footer__middle .footer__links {
+  body .footer__middle .footer__links {
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: flex;
@@ -655,21 +682,20 @@ h5 {
     align-items: center;
     width: 80%;
   }
-  .footer__middle .footer__links a {
+  body .footer__middle .footer__links a {
     font-size: 6vw;
     color: rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
   }
-  .footer__middle .footer__social nav {
+  body .footer__middle .footer__social nav {
     width: 100vw;
     padding: 5vw;
   }
-  .footer__middle .footer__social nav a i {
+  body .footer__middle .footer__social nav a i {
     font-size: 25px;
   }
-  /* ------------ */
-  .footer__end {
+  body .footer__end {
     font-size: 3.5vw;
   }
 }

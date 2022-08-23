@@ -1,17 +1,17 @@
 .footer__top {
-    background-color: $bg-top;
+    background-color: map-get($colors-footer, bg-top);
 }
 
 .footer__middle {
-    background-color: $bg-mdd;
+    background-color: map-get($colors-footer, bg-mdd ) ;
 }
 
 .footer__end {
-    background-color: $bg-end;
+    background-color: map-get($colors-footer, bg-end);
     align-items: center;
 }
 
-/* flexbox footer ........................................................ */
+//  flexbox footer ........................................................
 .footer__top {
     display: flex;
     flex-flow: row nowrap;
@@ -27,7 +27,7 @@
         h5 {
             font-size:150%;
             text-align: center;
-            color: $color-h5;
+            color: map-get($colors-footer, color-h5 );
         }
 
         .imgapp  {
@@ -71,7 +71,7 @@
         h5 {
             font-size:150%;
             text-align: center;
-            color: $color-h5;
+            color: map-get($colors-footer, color-h5 );
         }
 
         img {
@@ -97,12 +97,12 @@
         h5 {
             font-size:150%;
             text-align: center;
-            color: $color-h5;
+            color: map-get($colors-footer, color-h5 );
         }
 
         a {
             font-size: 1.5em;
-            color: $color-links;
+            color: map-get($colors-footer, color-links );
             display: flex;
             flex-direction: column;
 
@@ -112,7 +112,7 @@
                 animation-timing-function: ease-in;
                 animation-duration: 1s;
                 transition: color 0.3s ease;    
-                color: $color-lk-animat;
+                color: map-get($colors-footer, color-lk-animat );
             }
         }
     }
@@ -129,7 +129,7 @@
             align-items: flex-start;
             font-size:150%;
             text-align: center;
-            color: $color-h5;
+            color: map-get($colors-footer, color-h5 );
         }
 
         nav {
@@ -145,10 +145,10 @@
             font-size: 50px;
             display: flex;
             transition: all .8s ease;        
-            color: $color-icon-social;
+            color: map-get($colors-footer, color-icon-social );
 
             &:hover {
-                color: $color-icon-animat;
+                color: map-get($colors-footer, color-icon-animat );
                 font-size: 60px;
                 transition: all 1s ease;
                 
@@ -160,5 +160,5 @@
 .footer__end {
     display: flex;
     justify-content: center;
-    color: $color-foot-end;
+    color: map-get($colors-footer, color-foot-end );
 }

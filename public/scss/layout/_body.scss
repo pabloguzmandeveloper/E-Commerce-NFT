@@ -1,7 +1,5 @@
-
-
 body main {
     #carouselIndexHome {
-        height: $height-body-index;
+        height: map-get($ly-body, height-body-index ) ;
     }
 }

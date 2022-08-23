@@ -1,5 +1,5 @@
 main {
-/* flexbox main .................................................. */
+//  flexbox main ..................................................
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -15,7 +15,7 @@ main {
         overflow: hidden;
     }
 
-/* Caurosel index */
+//  Caurosel index
     .main__h2{
         text-align: center;
         font-size: 3vw;
@@ -31,7 +31,7 @@ main {
         }
     }
 
-/* bootstrap MAIN-------------------- */
+//  bootstrap MAIN--------------------
     .carousel-indicators {
         margin-bottom: -1rem;
     }

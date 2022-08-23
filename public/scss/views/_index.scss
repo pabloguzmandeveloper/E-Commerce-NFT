@@ -1,11 +1,22 @@
-/* STYLE 3D */
+// STYLE 3D
+.card-sizer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
 .contCardImg{
+    height: 60vh;
     perspective: 1000px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
 
-    .card__father{
+    .card__father{        
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
@@ -17,22 +28,13 @@
         }
 
         .cardBlock {
-            width:30vh;
-            height: 30vh;
+            @include cardBlock;
             position: relative;
             transform-style: preserve-3d;
             transition: all 2s;
             
             .card__front{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                backface-visibility: hidden;
-                transform-style: preserve-3d;
-                border-radius: 20px;
-                // --------------------------
+                @extend.card-sizer;
                 background-size: cover;
                 background-position: center;
 
@@ -51,15 +53,7 @@
             }
 
             .card__back{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                backface-visibility: hidden;
-                transform-style: preserve-3d;
-                border-radius: 20px;
-                // -------------------------
+                @extend.card-sizer;
                 display: flex;
                 justify-content: center;
                 background-position: center;
@@ -95,7 +89,7 @@
     }
 }
 
-/* About card----------------------------------- */
+// About card-----------------------------------
 .about{
     perspective: 1000px;
     display: flex;
