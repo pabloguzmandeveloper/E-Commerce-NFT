@@ -12,6 +12,7 @@ body {
 body {
   width: 100vw;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -424,15 +425,29 @@ main .contCardImg {
   box-shadow: 1px 1px 30px 0px #f70707;
 }
 
-main .video {
+.header-explore {
+  opacity: 0.5;
+}
+
+main .video-explore {
   display: flex;
   position: fixed;
+  z-index: -1;
+  opacity: 0.5;
+  min-width: 100vw;
+  max-width: 100vw;
+  justify-content: center;
+  overflow: hidden;
+}
+main .gallery-container {
+  position: sticky;
+  top: 0;
 }
 main #navbar-example2 {
   position: sticky;
   top: 60px;
-  border: 10px solid #1B75CE;
   z-index: 1;
+  overflow: hidden;
 }
 main .scrollspy-example .contCardImg {
   height: auto;
@@ -446,6 +461,10 @@ main .scrollspy-example .contCardImg .cardBlock {
   --bs-bg-opacity: 0;
 }
 
+.footer-explore {
+  opacity: 0.9;
+}
+
 .singleCardAbout {
   --bs-card-bg: rgba(255, 255, 255, 0);
 }
@@ -453,15 +472,7 @@ main .scrollspy-example .contCardImg .cardBlock {
   bottom: 0;
 }
 
-.main__contact {
-  justify-items: center;
-}
-.main__contact .form__email {
-  background-color: rgba(255, 140, 0, 0.342);
-  padding: 2%;
-}
-
-.body__aboutBackContact {
+.body__aboutViewBack {
   font-size: 8vh;
   width: 100%;
   height: 100%;
@@ -472,15 +483,49 @@ main .scrollspy-example .contCardImg .cardBlock {
   transform: translateZ(80px);
 }
 
-h5 {
-  font-size: 150%;
+.sizeTextAboutView {
+  font-size: 2.5vw;
   text-align: center;
-  color: #fff;
 }
 
-.sizeTextAboutContact {
-  font-size: 1.5vw;
-  text-align: center;
+.main__contact {
+  justify-items: center;
+}
+.main__contact .video-contact {
+  display: flex;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.5;
+  min-width: 100vw;
+  max-width: 100vw;
+  justify-content: center;
+  overflow: hidden;
+  top: 0;
+}
+.main__contact .container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin: 50px 30px;
+}
+.main__contact .form__email {
+  background-color: rgba(255, 140, 0, 0.342);
+  padding: 2%;
+}
+
+.footer-contact {
+  opacity: 0.9;
+}
+
+.main-blog .block-form {
+  margin: 180px 10px;
+}
+
+.footer-blog {
+  opacity: 0.9;
+  position: relative;
+  width: 100vw;
+  bottom: 0;
 }
 
 .carousel-caption {
@@ -488,7 +533,11 @@ h5 {
   padding-bottom: 0;
 }
 
-@media screen and (min-width: 1025px) {
+.carousel-item {
+  transition: transform 6s ease-in-out;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
   main .carousel-item .contCardImg .card__father {
     height: 60vh;
   }
@@ -503,6 +552,9 @@ h5 {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-blog .block-form {
+    margin: 340px 10px;
+  }
   body header .header__h1 {
     margin-top: 8%;
   }
@@ -631,11 +683,11 @@ h5 {
     margin-left: 5px;
     margin-right: 5px;
   }
-  body .body__aboutBackContact {
+  body .body__aboutViewBack {
     font-size: 10vw;
   }
-  body .sizeTextAboutContact {
-    font-size: 16px;
+  body .sizeTextAboutView {
+    font-size: 5.5vw;
   }
   body .footer__top {
     display: flex;

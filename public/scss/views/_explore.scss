@@ -1,15 +1,22 @@
 // Explore MAIN ---------------------
+.header-explore {
+        opacity: 0.5;
+    }
 main {
-    .video {
-        display: flex;
-        position: fixed;
+    .video-explore {
+        @include bg-video-view
+    }
+
+    .gallery-container {        
+        position: sticky;
+        top: 0;
     }
 
     #navbar-example2 {
         position: sticky;
         top:60px;
-        border:10px solid #1B75CE;
         z-index: 1;
+        overflow: hidden;
     }
 
     .scrollspy-example
@@ -19,11 +26,13 @@ main {
         .cardBlock {
             @include cardBlock;
         }
-
-
     }
 }
 
 .bg-transparent {
     --bs-bg-opacity: 0;
+}
+
+.footer-explore {
+    @include footer-view;
 }

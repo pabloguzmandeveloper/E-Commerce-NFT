@@ -1,0 +1,12 @@
+.main-blog {
+    .block-form {
+        margin: 180px  10px;
+    }
+}
+
+.footer-blog {
+    @include footer-view;
+    position: relative;
+    width: 100vw;
+    bottom: 0;
+}

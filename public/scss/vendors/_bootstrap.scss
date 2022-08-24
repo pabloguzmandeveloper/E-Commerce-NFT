@@ -2,3 +2,8 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+// laps time carousel
+.carousel-item {
+    transition: transform 6s ease-in-out;
+}

@@ -206,4 +206,16 @@ Y aún sigue sin estar perfectamente coincidente con el borde inferior del videg
 
     En scss/utilities/_variables.scss declaramos tres @mixin para la dimensión de las cards en cada responsive, con @include en scss/views/_index.scss y otros dos dentro de scss/res/_media-query.scss aplicamos las dimensiones.
 
-    
+24/agosto/2022
+    En las modificaciones y agregados para mejorar el SEO:
+ 
+	A cada página se le agregó en la metadata la descripción y keywords específicas para cada una sin ser iguales, como también la etiqueta tittle en todas las páginas son distintas referidas al tema de cada una.
+ 
+	Incorporamos un mapa para el seo en la raíz del proyecto archivo sitemap.xml
+	
+	Nos queda en armar completo un mapa del sitio en el mismo navbar principal, está armado sin todas las subramas a navegar.
+
+    Respecto a SASS hemos terminado de mejorar algunos errores cuando lo implementamos, cuestiones del video como background en las distintas páginas fué complicado ya que son distintas distribuciones o layouts.
+
+    Para resolver esos ajustes de SASS con las posiciones, trabajamos sobre los archivos media query y cada vista y estilo scss respectivo.
+
