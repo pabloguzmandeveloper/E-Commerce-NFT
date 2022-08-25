@@ -2,7 +2,7 @@
     main {
         .carousel-item
         .contCardImg
-        .card__father{
+        .card__father {
             height: 60vh;
             
             .imgNone {
@@ -28,11 +28,14 @@
     }
 
     body {
-        header .header__h1 {
+        header
+        .header__h1 {
             margin-top: 8%;
         }
 
-        nav .navBarTopSKMKNFT a {
+        nav
+        .navBar-header-top
+        a {
             font-size:130%;
         }
 
@@ -42,31 +45,39 @@
                 height: 80vh;
             
                 .carousel-item
-                .contCardImg .cardBlock {
+                .contCardImg
+                .cardBlock {
                     @include cardBlock-tablet
                 }
             }
 
-            .about .about__father .about__card {
+            .about
+            .about__father
+            .about__card {
                 width: 80vw;
                 height: 20vh ;
 
-                .about__front .body__about_front {
-                    font-size: 3vh;
+                .about__front
+                .body__about_front {
+                    font-size: 5vh;
                 }
                 
-                .about__back .body__about_back p {
+                .about__back
+                .body__about_back
+                p {
                     font-size: 18px;
                 }
             }
             
         }
         
-        .footer__middle .footer__social i {
+        .footer__middle
+        .footer__social
+        i {
             font-size: 25px;
         }
 
-        .sizeTextAboutContact {
+        .sizeTextAboutView {
             font-size: 4vw;
         }
     }
@@ -87,10 +98,10 @@
         }
 
         .navbar-dark {        
-            background-color:hsla(39, 100%, 51%);
+            background-color: $navbar-dark;
             height: 40px;
 
-            .navBarTopSKMKNFT {
+            .navbar-header-top {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -118,7 +129,7 @@
                 height: map-get($ly-body, hg-bd-idx-smal ) ;
             }
 
-            .main__h2{
+            .main__h2 {
                 margin-top: 15px;
                 text-align: center;
                 font-size: 5vw;
@@ -133,20 +144,23 @@
             }
             
         //  images carousel----------------
-            .main__section{
+            .main__section {
                 max-height: 950px;
                 transition: all 0s ease-in;    
                 transition-delay: 0s;
             }
+
             .main__h2:hover ~ .main__section {
                 max-height: 1000px;
                 transition: all 0s ease-in;
                 transition-delay: 0s;
             }
+
             .carousel-item {
                 height: 90vh;
                 
-                .contCardImg .cardBlock {                    
+                .contCardImg
+                .cardBlock {                    
                     @include cardBlock-mobile;
                 }
 
@@ -171,17 +185,18 @@
             .scrollspy-example
             .contCardImg {
                 .cardBlock {                    
-                    @include cardBlock-explore;
+                    @include cardBlock-explore-h-w;
                 }
             }
         }
         
-
         // ABOUT CARD-----------------------------
-        .about .about__father{
+        .about
+        .about__father{
             margin-bottom: 5vw;
 
-            &:hover .about__card {
+            &:hover
+            .about__card {
                 transform: rotateY(180deg);
             }
 
@@ -192,7 +207,8 @@
                 .about__back{
                     transform: rotateY(180deg);
 
-                    .body__about_back p {
+                    .body__about_back
+                    p {
                         font-size: 11px;
                         margin-top: 0px;
                         margin-left: 5px;
@@ -228,7 +244,7 @@
                     margin-top: 2vh;
                     font-size: 5vw;
                     text-align: center;
-                    color: #fff;
+                    color: map-get($colors-footer, color-h5 );
                 }
             }
 
@@ -266,13 +282,14 @@
 
                 a {
                     font-size: 6vw;
-                    color: rgb(255, 0, 0);
+                    color: map-get($colors-footer, color-links );
                     display: flex;
                     flex-direction: column;
                 }
             }
 
-            .footer__social nav {
+            .footer__social
+            nav {
                 width: 100vw;
                 padding: 5vw;
 

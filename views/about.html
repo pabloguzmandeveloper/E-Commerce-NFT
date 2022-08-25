@@ -22,35 +22,34 @@
 <body>
     <!-- ............................................................ -->
     <nav class="navbar navbar-dark fixed-top">
-        <div class="navBarTopSKMKNFT">
-            <a class="navbar-brand header__home" href="../index.html">S K A T E   M O N K E Y<div class="nftNone">- NFT</div></a>
+        <div class="navbar-header-top">
+            <a class="navbar-brand header__home" href="../index.html">S K A T E   M O N K E Y<div class="nftNone"> - NFT</div></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars"></i>
             </button>
             <audio id="player" class="header__audio" src="../public/audio/experience-sorround.mp3" standby="charging" loop controls></audio>
-            <button onclick="document.getElementById('player').play()">Play</button>
-            <button onclick="document.getElementById('player').pause()">Pause</button>
+            <button class="music-button" onclick="document.getElementById('player').play()"><i class="fa-solid fa-play"></i></button>
+            <button class="music-button" onclick="document.getElementById('player').pause()"><i class="fa-solid fa-circle-pause"></i></button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu SkateMonkey
-                </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Map SkateMonkey</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="animate__animated animate__pulse" href="../views/explore.html">E x p l o r e - g a l l e r y</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="animate__animated animate__pulse" href="../views/blog.html">B l o g</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="animate__animated animate__pulse" href="../views/contact.html">H e l p - c e n t e r</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="animate__animated animate__pulse" href="../views/explore.html">E x p l o r e - g a l l e r y</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="animate__animated animate__pulse" href="../views/blog.html">B l o g</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="animate__animated animate__pulse" href="../views/contact.html">H e l p - c e n t e r</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             </div>

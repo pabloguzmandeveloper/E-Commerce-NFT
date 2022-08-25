@@ -4,7 +4,8 @@
     }
 main {
     .video-explore {
-        @include bg-video-view
+        @include bg-video-view;
+        top: 0;
     }
 
     .gallery-container {        
@@ -24,7 +25,7 @@ main {
         height: auto;
 
         .cardBlock {
-            @include cardBlock;
+            @include cardBlock-h-w;
         }
     }
 }

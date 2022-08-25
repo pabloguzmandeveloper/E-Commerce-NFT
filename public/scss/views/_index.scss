@@ -28,7 +28,7 @@
         }
 
         .cardBlock {
-            @include cardBlock;
+            @include cardBlock-h-w;
             position: relative;
             transform-style: preserve-3d;
             transition: all 2s;
@@ -127,6 +127,7 @@
             .about__front{
                 background-size: cover;
                 background-position: center;
+                background-color: $frontAbout;
                 
                 .body__about_front{
                     font-size: 5vh;

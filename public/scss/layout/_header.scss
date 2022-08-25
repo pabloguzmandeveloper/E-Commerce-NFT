@@ -1,16 +1,35 @@
-nav {
-    .navBarTopSKMKNFT {
+body nav {
+    .navbar-header-top {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+
         a {            
             font-size: 25px ;
             font-weight: bolder;
             color: $navbarHome;
+            margin-left: 3vw;
             width: 90%;
 
             .nftNone {
                 display: none;
             }            
         }
-        
+
+        .navbar-toggler {
+            border: white solid;
+        }
+
+        .music-button {
+            margin-left: 2vw;
+            margin-right: 1vw;
+            height: auto;
+            width: auto;
+            border: 0px;
+            background-color: transparent;
+            color: white;
+        }
+
         ul {
             li {
                 a {color: white;

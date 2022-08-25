@@ -1,5 +1,9 @@
 // Colors of header
 $navbarHome: pink;
+$navbar-dark: hsla(39, 100%, 51%);
+
+// Colors of body
+$frontAbout: rgb(255, 206, 47);
 
 // Colors of footer
 $colors-footer:(
@@ -33,12 +37,12 @@ $ly-body:(
     width: 30vh;
 }
 
-@mixin cardBlock {
+@mixin cardBlock-h-w {
     height:50vh;
     width: 50vh;
 }
 
-@mixin cardBlock-explore {
+@mixin cardBlock-explore-h-w {
     height:40vh;
     width: 40vh;
 }
