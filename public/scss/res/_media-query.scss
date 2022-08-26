@@ -1,3 +1,4 @@
+// RESTPONSIVE DESKTOP HD TO DESKTOP 2K
 @media  screen and (min-width: 1025px) and (max-width:1920px) {
     main {
         .carousel-item
@@ -19,7 +20,7 @@
         }
     }
 }
-
+// RESPONSIVE TABLET TO DESKTOP HD
 @media  screen and (min-width: 768px) and (max-width:1024px){
     .main-blog {
         .block-form {
@@ -40,6 +41,9 @@
         }
 
         main {
+            #navbar-example2 .nav a {
+                font-size: 2vw;
+            }
 
             .carousel-inner {
                 height: 80vh;
@@ -82,7 +86,7 @@
         }
     }
 }
-
+// RESPONSIVE SMALL TO TABLET
 @media screen and (min-width: 280px ) and (max-width:767px) and (orientation: portrait) {
     body {    
         header {        
@@ -176,9 +180,30 @@
                 top: 40px;
                 height: 40px;
                 border: 5px solid #281a06;
-                font-size: 8px;
-                a {
-                    font-size: 8px;
+                font-size: 8px;                
+                --bs-navbar-padding-x: 0rem;
+                --bs-navbar-padding-y: 0rem;
+                display:flex;
+                justify-content: space-evenly;
+
+                .nav {
+                    --bs-nav-link-padding-x: 0.6rem;
+                    --bs-nav-link-padding-y: 0.35rem;
+
+                    a {
+                        font-size: 10px;
+                        color: #c86f17;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                    }
+
+                    .active {
+                        background-color: $navbar-dark;
+                        font-weight: bold;
+                        color: #000000;
+                    }
                 }
             }
 
@@ -219,9 +244,14 @@
         }
 
         // about.html-----------------------------
-        .body__aboutViewBack {
+        .row {
+            --bs-gutter-x: 0px;
+            
+            .body__aboutViewBack {
             font-size: 10vw;
         }
+        }
+        
 
         .sizeTextAboutView {
             font-size: 5.5vw;

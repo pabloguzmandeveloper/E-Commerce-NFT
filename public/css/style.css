@@ -557,6 +557,24 @@ main .scrollspy-example .contCardImg .cardBlock {
   transition: transform 6s ease-in-out;
 }
 
+main #navbar-example2 .nav {
+  --bs-nav-link-padding-x: 0.6rem;
+  --bs-nav-link-padding-y: 0.35rem;
+}
+main #navbar-example2 .nav a {
+  font-size: 1vw;
+  color: #c86f17;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.1vw;
+  padding-bottom: 0.02vw;
+}
+main #navbar-example2 .nav .active {
+  background-color: hsl(39deg, 100%, 51%);
+  font-weight: bold;
+  color: #000000;
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1920px) {
   main .carousel-item .contCardImg .card__father {
     height: 60vh;
@@ -580,6 +598,9 @@ main .scrollspy-example .contCardImg .cardBlock {
   }
   body nav .navBar-header-top a {
     font-size: 130%;
+  }
+  body main #navbar-example2 .nav a {
+    font-size: 2vw;
   }
   body main .carousel-inner {
     height: 80vh;
@@ -676,9 +697,27 @@ main .scrollspy-example .contCardImg .cardBlock {
     height: 40px;
     border: 5px solid #281a06;
     font-size: 8px;
+    --bs-navbar-padding-x: 0rem;
+    --bs-navbar-padding-y: 0rem;
+    display: flex;
+    justify-content: space-evenly;
   }
-  body main #navbar-example2 a {
-    font-size: 8px;
+  body main #navbar-example2 .nav {
+    --bs-nav-link-padding-x: 0.6rem;
+    --bs-nav-link-padding-y: 0.35rem;
+  }
+  body main #navbar-example2 .nav a {
+    font-size: 10px;
+    color: #c86f17;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  body main #navbar-example2 .nav .active {
+    background-color: hsl(39deg, 100%, 51%);
+    font-weight: bold;
+    color: #000000;
   }
   body main .scrollspy-example .contCardImg .cardBlock {
     height: 40vh;
@@ -703,7 +742,10 @@ main .scrollspy-example .contCardImg .cardBlock {
     margin-left: 5px;
     margin-right: 5px;
   }
-  body .body__aboutViewBack {
+  body .row {
+    --bs-gutter-x: 0px;
+  }
+  body .row .body__aboutViewBack {
     font-size: 10vw;
   }
   body .sizeTextAboutView {

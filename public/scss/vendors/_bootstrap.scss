@@ -7,3 +7,28 @@
 .carousel-item {
     transition: transform 6s ease-in-out;
 }
+
+// #navbar.example2 in explore.html
+main {
+    #navbar-example2 {
+        .nav {
+            --bs-nav-link-padding-x: 0.6rem;
+            --bs-nav-link-padding-y: 0.35rem;
+
+            a {
+                font-size: 1vw;
+                color: #c86f17;
+                padding-left: 2vw;
+                padding-right: 2vw;
+                padding-top: 0.1vw;
+                padding-bottom: 0.02vw;
+            }
+
+            .active {
+                background-color: $navbar-dark;
+                font-weight: bold;
+                color: #000000;
+            }
+        }
+    }
+}
