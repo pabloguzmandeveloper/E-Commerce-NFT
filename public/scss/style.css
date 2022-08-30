@@ -278,7 +278,6 @@ main .contCardImg {
   display: flex;
   justify-content: center;
   color: #ffffff;
-  font-size: 16px;
 }
 
 .card-sizer, .contCardImg .card__father .cardBlock .card__back, .contCardImg .card__father .cardBlock .card__front {
@@ -563,7 +562,7 @@ main #navbar-example2 .nav {
   --bs-nav-link-padding-y: 0.35rem;
 }
 main #navbar-example2 .nav a {
-  font-size: 16px;
+  font-size: 1vw;
   color: #c86f17;
   padding-left: 2vw;
   padding-right: 2vw;
@@ -599,6 +598,9 @@ main #navbar-example2 .nav .active {
   }
   body nav .navBar-header-top a {
     font-size: 130%;
+  }
+  body main #navbar-example2 .nav a {
+    font-size: 2vw;
   }
   body main .carousel-inner {
     height: 80vh;
@@ -692,9 +694,9 @@ main #navbar-example2 .nav .active {
   }
   body main #navbar-example2 {
     top: 40px;
-    height: auto;
+    height: 40px;
     border: 5px solid #281a06;
-    font-size: 0px;
+    font-size: 8px;
     --bs-navbar-padding-x: 0rem;
     --bs-navbar-padding-y: 0rem;
     display: flex;
@@ -806,6 +808,9 @@ main #navbar-example2 .nav .active {
   }
   body .footer__middle .footer__social nav a i {
     font-size: 25px;
+  }
+  body .footer__end {
+    font-size: 3.5vw;
   }
 }
 

@@ -41,10 +41,6 @@
         }
 
         main {
-            #navbar-example2 .nav a {
-                font-size: 2vw;
-            }
-
             .carousel-inner {
                 height: 80vh;
             
@@ -139,7 +135,7 @@
                 font-size: 5vw;
                 transition: all 0s ease-in;
                 transition-delay: 0s;
-                background-color: #969696d3;
+                background-color: #ffffffd3;
 
                 &:hover {
                     transition: all 0s ease-in;
@@ -178,9 +174,9 @@
         main {
             #navbar-example2 {
                 top: 40px;
-                height: 40px;
+                height: auto;
                 border: 5px solid #281a06;
-                font-size: 8px;                
+                font-size: 0px;                
                 --bs-navbar-padding-x: 0rem;
                 --bs-navbar-padding-y: 0rem;
                 display:flex;
@@ -191,7 +187,7 @@
                     --bs-nav-link-padding-y: 0.35rem;
 
                     a {
-                        font-size: 10px;
+                        font-size: 16px;
                         color: #c86f17;
                         padding-left: 8px;
                         padding-right: 8px;
@@ -252,7 +248,6 @@
         }
         }
         
-
         .sizeTextAboutView {
             font-size: 5.5vw;
         }
@@ -327,11 +322,6 @@
                     font-size: 25px;
                 }
             }
-        }
-
-        // ------------
-        .footer__end {
-            font-size: 3.5vw;
         }
     }
 }
