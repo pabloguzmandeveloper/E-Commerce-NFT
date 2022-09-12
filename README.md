@@ -29,4 +29,8 @@ https://filippobello.com/works/amazon
 
     De esta página rescato la dinámica construcción de sus fuentes en cuanto al efecto multi-flip en determinadas palabras.
 
-****TABLERO DE TRABAJO TRELLO****
+Video de muestra
+
+https://gifs.com/gif/skatemonkey-gpNG4G
+
+<iframe src='//gifs.com/embed/skatemonkey-gpNG4G' frameborder='0' scrolling='no' width='1280px' height='720px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
